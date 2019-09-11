@@ -6,6 +6,7 @@
 
 **To do**
 - Plan project
+    - Write spec with description, user stories, UX design
 
 **Done**
 - Initialised repo with readme and approach
