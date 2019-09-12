@@ -64,10 +64,14 @@ I want everything to be TDD'd and robust
 
 ## Extension
 
-This is a game on it's own, but also the mechanical basis for a series of art pieces as games. How they will differ:
+This is a game on it's own, but also the mechanical basis/ MVP for a series of art pieces as games. How they will differ:
 - The sequences will be of a fixed length each.
 - The tempo of each sequence will be determined by the art already made.
 - The gestures in each round will be designed over the art.
 - The gestures will be designed as less or more difficult by their length, ergonomics(placement, divisions and directions) and speed.
 - Difficulty will also be determined by how precise the player's position and timing of there gestures must be.
 - The player's turns will animate the audiovisual elements of the interactive poem, if played correctly.
+
+And then much further down the line, as VR pieces:
+- 3D gestures
+- Haptic feedback and outward-facing camera sharing/integration when moving in sync with other remote networked players
