@@ -11,18 +11,61 @@
 **Done**
 - Initialised repo with readme and approach
 - Made initial mechanics design diagrams
+```
+The original game was restricted to playing with fixed buttons made of plastic:
+```
+
+![original_gameplay](wip/OriginalGameplay.png)
+
+```
+There was no win state, the length of the longest sequence you remembered was your high score.
+
+Taking inspriration from this but with the flexibility of being able to display anything:
+```
+![new gameplay](wip/NewGameplay.png)
+```
+Again the win state will just be a highscore, but with this version the higher your score the more vibrant and dynamic the visual effects could get.
+```
 - Wrote initial user stories
 - Added terminology of main gameplay loops
 - Added notes about the future evolution and application of this project
 
 ## Session 002
 
-**Thu Sep 12 15:14:15 - 
+**Thu Sep 12 15:14:15 - Thu Sep 12 16:57:02"
 
 **To do**
 - Plan the UX
+- Initialise Unity project
+- Start on the first user story
 
 **Done**
 - Drew the intitial draft of the UX, sans some styling
 
 ![UX](wip/UX_001.png)
+
+- Made a new project with a black background
+
+- Test driving the development, delineated the UX loop:
+    - Press the start button
+    - Watch a gesture
+    - Draw a gesture
+    - See another gesture if succesful or my score if not
+    - Go back to the start menu after seeing my score
+
+- Setting up for testing:
+    - Create Assets/Scripts folder
+    - Open the Test Runner Window
+    - Click create edit mode test runner folder in /Scripts
+    - Created StartButtonTest file
+    - Checked placeholder tests pass
+
+![testrunner](wip/testrunner.png)
+
+- Made a .gitignore
+- Excluded temp, log, library, builds folders, and all .meta files
+- Set Unity package names in player settings
+- Ran a test build in Unity
+- Unity hanging so forcing quit
+- Renamed Unity project folder to remove space
+- Build completed
