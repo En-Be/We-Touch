@@ -82,3 +82,34 @@ Again the win state will just be a highscore, but with this version the higher y
 - Made a [Trello board](https://trello.com/b/6atZPpqj/n3ttl3tsays) with user story 4 intial tasks
 - Decided to make it work first in the editor, then in play mode
 - Changed my mind about that. Recording in play mode, tools in edit mode.
+
+## Session 04
+
+**Fri Sep 27 15:59:38 - Fri Sep 27 17:08:15**
+
+**To do**
+- See if I can console log while running play on my phone
+- Test writing the mouse position to file
+
+**Done**
+- Ran game on phone
+- Ran on phone with visible cube
+- Running game just a black screen
+- Was in the wrong scene, not in build
+- Input Manager in scene that logs mouse position when touching:
+
+![UnityLog](./wip/UnityLog.png)
+- Logging input work on the laptop, doesn't show from the phone
+- Tried an adb command:
+```
+adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
+
+```
+- Tried installing modules through unity hub and running the monitor
+- Monitor not showing log when touching screen
+- Monitor does show now, made a Unity tag filter, added monitor to start menu
+
+![AndroidLog](./wip/AndroidLog.png)
+
+- Touch is loggable. Will have to convert mousepos to account for different screen sizes
+<!-- - Test logging mouse hold position to console -->
