@@ -83,7 +83,7 @@ Again the win state will just be a highscore, but with this version the higher y
 - Decided to make it work first in the editor, then in play mode
 - Changed my mind about that. Recording in play mode, tools in edit mode.
 
-## Session 04
+## Session 004
 
 **Fri Sep 27 15:59:38 - Fri Sep 27 17:08:15**
 
@@ -112,4 +112,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 ![AndroidLog](./wip/AndroidLog.png)
 
 - Touch is loggable. Will have to convert mousepos to account for different screen sizes
-<!-- - Test logging mouse hold position to console -->
+
+## Session 005
+
+**Fri Sep 27 17:20:53 - Fri Sep 27 17:57:28**
+
+**To Do**
+- Test logging mouse hold position to console
+- Move a ball with touch
+
+**Done**
+- Logging isn't really a thing to test.
+- Touching the screen moves the object but not as expected
+- Translating screen to world space
+
+![wip001](./wip/wip001.gif)
+
+- Noticeable lag on device
+    - Changing to FixedUpdate didn't help
+    - Need to change to Touches instead of MouseButton
