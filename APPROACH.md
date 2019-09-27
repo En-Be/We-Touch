@@ -69,3 +69,16 @@ Again the win state will just be a highscore, but with this version the higher y
 - Unity hanging so forcing quit
 - Renamed Unity project folder to remove space
 - Build completed
+
+## Session 003
+
+**Fri Sep 27 13:36:43 - Fri Sep 27 14:13:48**
+
+**To do**
+- Delineate the first developer story
+- Prioritize tasks in a Trello board
+
+**Done**
+- Made a [Trello board](https://trello.com/b/6atZPpqj/n3ttl3tsays) with user story 4 intial tasks
+- Decided to make it work first in the editor, then in play mode
+- Changed my mind about that. Recording in play mode, tools in edit mode.

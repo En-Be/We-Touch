@@ -6,6 +6,7 @@ The classic handheld flashing lights reimagined for touch screens.
 Initially a minimalist game but really the MVP for a series of interactive poems.
 
 Please see the [approach](APPROACH.md) for details of my development process.
+Also see the [Trello board](https://trello.com/b/6atZPpqj/n3ttl3tsays) used to figure out and prioritise tasks during development.
 
 ## Gameplay
 
@@ -59,6 +60,10 @@ I want everything to be TDD'd and robust
 - A turn: one short unit of time for making gestures, either the game's or the player's.
 - A round: two turns, the game's and the player's.
 - A sequence: a collection of turns. The length of this collection is the score.
+
+## UX
+
+![UX](wip/UX_001.png)
 
 ---
 
