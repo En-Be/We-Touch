@@ -134,11 +134,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 006
 
-**Mon Oct  7 17:05:40 - 
+**Mon Oct  7 17:05:40 - Mon Oct  7 18:38:50**
 
 **To do**
 - Change out testing story for Houdini instead
 - Change mouse pos for touch events
 
 **Done**
-- 
+- Changed the user story. Trying to test it is just getting in the way. I think it would be more relevent if this was a team project.
+- Logged the Input.touchCount to check the device registers touches properly
+- Movement changed to touch input but still lagging
+    - Reading online, apparently this is a common issue due to engine framerate. Installing a preview package to see if this fixes it since low latency is mission critical.
+
+    ![inputpackage](wip/inputpackage.png)
+    - Changed the player settings to only use the new input system
+    - Added the UnityEngine.InputSystem namespace
+    - After reading around, I may have to do this through a new component instead of in a script.
+
+---
+
+## Tasks
+
+- Metronome border
+- Add a switch for input (editor/device)
