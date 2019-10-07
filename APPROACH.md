@@ -131,3 +131,14 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Noticeable lag on device
     - Changing to FixedUpdate didn't help
     - Need to change to Touches instead of MouseButton
+
+## Session 006
+
+**Mon Oct  7 17:05:40 - 
+
+**To do**
+- Change out testing story for Houdini instead
+- Change mouse pos for touch events
+
+**Done**
+- 

@@ -6,7 +6,6 @@ The classic handheld flashing lights reimagined for touch screens.
 Initially a minimalist game but really the MVP for a series of interactive poems.
 
 Please see the [approach](APPROACH.md) for details of my development process.
-Also see the [Trello board](https://trello.com/b/6atZPpqj/n3ttl3tsays) used to figure out and prioritise tasks during development.
 
 ## Gameplay
 
@@ -50,8 +49,8 @@ I want a way to record my own and compare input to them
 
 ```
 As the developer,
-so I can extend or reuse these features in the future,
-I want everything to be TDD'd and robust
+so I can learn something about shaders and generating visual,
+I want to use Houdini for the effects
 ```
 
 ## Spec

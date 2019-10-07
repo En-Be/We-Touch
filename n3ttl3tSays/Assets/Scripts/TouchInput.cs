@@ -5,6 +5,12 @@ using UnityEngine;
 public class TouchInput : MonoBehaviour
 {
     public GameObject cube;
+    public AnimationClip clip;
+
+    void Awake()
+    {
+        clip = new AnimationClip();
+    }
 
     void Update()
     {
