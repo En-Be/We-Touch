@@ -151,6 +151,25 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - Added the UnityEngine.InputSystem namespace
     - After reading around, I may have to do this through a new component instead of in a script.
 
+
+## Session 007
+
+**Sun Oct 13 17:29:44 - Sun Oct 13 18:40:30**
+
+**To do**
+- Use the new input system to trigger a script method
+
+**Done**
+- Created a controls actions asset
+- In the inspector for the asset, click create c# file
+- Create a playergesturingscript that has a private Controls assigned in awake
+- Add the assembly reference:
+    ```
+    using UnityEngine.InputSystem;
+    ```
+- Add on enable and disable events that add/remove callbacks to the action and enable them
+- Tested the input on the device logs the message, it does
+
 ---
 
 ## Tasks

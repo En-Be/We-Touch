@@ -321,10 +321,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805518469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2de1e5a0fade446a976117b9a13ad8, type: 3}
+  m_Script: {fileID: 11500000, guid: f3af1c376324cf34a912a16ae4cb8dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 1159968784}
 --- !u!4 &1805518471
 Transform:
   m_ObjectHideFlags: 0
