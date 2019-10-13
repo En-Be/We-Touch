@@ -170,6 +170,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Add on enable and disable events that add/remove callbacks to the action and enable them
 - Tested the input on the device logs the message, it does
 
+## Session 008
+
+**Sun Oct 13 19:40:51 - Sun Oct 13 21:22:00**
+
+**To do**
+- Get the position of the touch
+- Move the cube with the touch
+
+**Done**
+- Added a new action to the input controller
+- Set it to be a value, the touch position
+- Read the value
+- Use the value to change position of cube
+- Still lags
+- Found a paid plugin on the asset store that can decrease the latency slightly
+- Using android debug tools, found that there is a lag natively on android, not just from unity.
+- Could be a mission critical limitation, no way to know without testing the mvp
+- Found another thread that used normalised values to cut latency
+- Not really sure what normalize does but didn't help
+
 ---
 
 ## Tasks

@@ -27,7 +27,6 @@ public class TouchInput : MonoBehaviour
             
     //         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
     //         worldPoint.y = 0;
-    //         Debug.Log(worldPoint);
     //         cube.transform.position = worldPoint;
 
     //         if(touch.phase == TouchPhase.Ended)

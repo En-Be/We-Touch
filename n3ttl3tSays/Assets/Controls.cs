@@ -24,6 +24,14 @@ public class Controls : IInputActionCollection
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Drag"",
+                    ""type"": ""Value"",
+                    ""id"": ""53a90e85-d328-4fbb-b528-8e488817f00d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -48,6 +56,28 @@ public class Controls : IInputActionCollection
                     ""action"": ""Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""055e8bd3-b381-4ef0-8265-f44b40ddaf3e"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc7eea81-979a-4c6a-b123-99d01b28225b"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +87,7 @@ public class Controls : IInputActionCollection
         // Gesturing
         m_Gesturing = asset.FindActionMap("Gesturing", throwIfNotFound: true);
         m_Gesturing_Press = m_Gesturing.FindAction("Press", throwIfNotFound: true);
+        m_Gesturing_Drag = m_Gesturing.FindAction("Drag", throwIfNotFound: true);
     }
 
     ~Controls()
@@ -107,11 +138,13 @@ public class Controls : IInputActionCollection
     private readonly InputActionMap m_Gesturing;
     private IGesturingActions m_GesturingActionsCallbackInterface;
     private readonly InputAction m_Gesturing_Press;
+    private readonly InputAction m_Gesturing_Drag;
     public struct GesturingActions
     {
         private Controls m_Wrapper;
         public GesturingActions(Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Press => m_Wrapper.m_Gesturing_Press;
+        public InputAction @Drag => m_Wrapper.m_Gesturing_Drag;
         public InputActionMap Get() { return m_Wrapper.m_Gesturing; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -124,6 +157,9 @@ public class Controls : IInputActionCollection
                 Press.started -= m_Wrapper.m_GesturingActionsCallbackInterface.OnPress;
                 Press.performed -= m_Wrapper.m_GesturingActionsCallbackInterface.OnPress;
                 Press.canceled -= m_Wrapper.m_GesturingActionsCallbackInterface.OnPress;
+                Drag.started -= m_Wrapper.m_GesturingActionsCallbackInterface.OnDrag;
+                Drag.performed -= m_Wrapper.m_GesturingActionsCallbackInterface.OnDrag;
+                Drag.canceled -= m_Wrapper.m_GesturingActionsCallbackInterface.OnDrag;
             }
             m_Wrapper.m_GesturingActionsCallbackInterface = instance;
             if (instance != null)
@@ -131,6 +167,9 @@ public class Controls : IInputActionCollection
                 Press.started += instance.OnPress;
                 Press.performed += instance.OnPress;
                 Press.canceled += instance.OnPress;
+                Drag.started += instance.OnDrag;
+                Drag.performed += instance.OnDrag;
+                Drag.canceled += instance.OnDrag;
             }
         }
     }
@@ -138,5 +177,6 @@ public class Controls : IInputActionCollection
     public interface IGesturingActions
     {
         void OnPress(InputAction.CallbackContext context);
+        void OnDrag(InputAction.CallbackContext context);
     }
 }
