@@ -245,8 +245,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - 6. If not enough sparkles, game ends
             - If turn score < difficulty out of a hundred, go to 7
     - 7. Display the score
-            - Keep score across into game ended screen
+            - Keep score across to game ended screen
 
+## Session 011
+
+**Mon Oct 21 20:43:55 - Mon Oct 21 21:13:43**
+
+**To do**
+- Make menu, main and end scenes
+- Make buttons to move between them
+- Make a visual metronome that just plays twice for now
+
+**Done**
+- Made a menu scene and removed input and gesture control scripts
+- Added a canvas and button to the input manager
+- made a menu script with a playnewgame method
+- Created a new canvas gameobject instead, added the menu script to that
+- Changed the method to accept a string for the level to make it reuseable
+- Copied the scene and changed button text and level to load string, to make it the end menu
+- Made a GameManager script on a new empty object
+- Made a new canvas object called metronome and started adding borders
 
 ---
 
