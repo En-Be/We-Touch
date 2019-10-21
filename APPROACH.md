@@ -190,6 +190,21 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Found another thread that used normalised values to cut latency
 - Not really sure what normalize does but didn't help
 
+## Session 009
+
+**Mon Oct 21 18:42:25 - Mon Oct 21 19:17:45**
+
+**To do**
+- Roll back to simple touch input
+- Implement simple click input
+- Make touches and clicks trigger separate behaviour script (single responsibility principle)
+- Plan the implementation of turns and rounds
+
+**Done**
+- Went back to simple touch input
+- Simple mouse input
+- touches and clicks trigger GestureControl component
+
 ---
 
 ## Tasks
