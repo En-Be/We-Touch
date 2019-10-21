@@ -266,9 +266,37 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Made a GameManager script on a new empty object
 - Made a new canvas object called metronome and started adding borders
 
+## Session 012
+
+**Mon Oct 21 21:18:59 - Mon Oct 21 22:05:11**
+
+**To Do**
+- Make the border
+- Animate the border
+- Add game over logic
+
+**Done**
+- Added border panels and anchored them to each side
+- Made the canvas size renderer a constant pixel size
+- Made an animation folder with a controller for the new metronome animator component
+- Added a new animation in the controller with the borders colours as parameters
+- Faded the colour from white to black
+
+    ![wip002](wip/wip002.gif)
+
+-  Made a metronome script with a finishTurn method
+- Added a switch so the metronome flips the current turn on the gamemanager between game and player
+- Added an event to the animator the trigger the switch
+- Added a method to check the turn score if it is the player turn
+    - difficulty value is a range slider from 0 to 100
+    - Loads end menu if < difficulty
+    - Happens late...
+- Changed the canvas's to have constant physical size instead of by pixels (looked to small on device)
+- Adjusted dimensions of buttons and borders
+
 ---
 
 ## Tasks
 
-- Metronome border
+- Remove latency on metronome check(only trigger fade animation if passed?)
 - Add a switch for input (editor/device)
