@@ -205,6 +205,49 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Simple mouse input
 - touches and clicks trigger GestureControl component
 
+## Session 010
+
+**Mon Oct 21 19:50:44 - Mon Oct 21 20:36:02**
+
+**To do**
+- Plan the implementation of turns and rounds
+- Make some gestures in the animator. Get the game loop working before planning the recorder implementation
+
+
+**Done**
+- Removed the old input package
+- Started the CRC diagram:
+
+    ![CRC](wip/CRC.png)
+
+- Started the control flow diagram but got a bit stuck:
+
+    ![controlflow01](wip/controlflow01.png)
+
+- Roughed out the game loop algorithm
+    - 1. Player presses play
+            - Tap the play button
+            - Enter game mode scene
+    - 2. Watch a gesture
+            - Start the visual metronome border
+            - Make a list of gestures
+            - Choose one from library and add it
+            - Play the next gesture on the list
+    - 3. Try and copy the gesture
+            - Restart the visual metronome border
+            - Play the gesture invisibly
+            - If the touch collides with the gesture, increase the turn score
+    - 4. If close, emit sparkles
+            - When turn score increases, emit particles
+    - 5. If enough sparkles, next round (repeat from 2 with a new gesture added)
+            - Wait for the metronome to finish
+            - If turn score > difficulty out of a hundred, back to 2
+    - 6. If not enough sparkles, game ends
+            - If turn score < difficulty out of a hundred, go to 7
+    - 7. Display the score
+            - Keep score across into game ended screen
+
+
 ---
 
 ## Tasks
