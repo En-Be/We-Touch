@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TouchInput : MonoBehaviour
 {
-    public GameObject cube;
     private GestureControl gestureControl;
 
     void Awake()
@@ -24,7 +23,9 @@ public class TouchInput : MonoBehaviour
             }
             Debug.Log($"Touching at X:{touch.position.x} and Y:{touch.position.y}");
             
-                        gestureControl.NewGesture(touch.position);
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
+            worldPoint.y = 0;
+            gestureControl.NewGesture(worldPoint);
 
 
             if(touch.phase == TouchPhase.Ended)

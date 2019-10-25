@@ -294,9 +294,31 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Changed the canvas's to have constant physical size instead of by pixels (looked to small on device)
 - Adjusted dimensions of buttons and borders
 
+## Session 013
+
+**Fri Oct 25 13:46:40 - Fri Oct 25 14:57:12**
+
+**To do**
+- Remove latency on metronome check(only trigger fade animation if passed?)
+- Make sample animations as example gestures
+
+**Done**
+- Added a trigger condition to the metronome's animator loop
+- Found the animator with getcomponent
+- Set play trigger unless player fail
+- Made a gesture library folder
+- Made a GestureLibraryInput script that will read from the library and send a vector to the gesture control
+- Gave the input manager an animator
+- Made an empty to animate
+- Made a sample animation to trigger
+- Trigger the anim on game's turn
+- Coroutine starts and stops sending the animtarget vector to gesture control
+- Moved the worldpoint logic to only the relevant inputs
+- Disable touch and mouse inputs from game manager during game's turn
+- Made gamemanager trigger game's turn first
 ---
 
 ## Tasks
 
-- Remove latency on metronome check(only trigger fade animation if passed?)
-- Add a switch for input (editor/device)
+- Make editor view closer to device scaling
+- Add an automatic switch for input (editor/device)

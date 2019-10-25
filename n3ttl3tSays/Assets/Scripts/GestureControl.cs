@@ -18,10 +18,13 @@ public class GestureControl : MonoBehaviour
         MoveCube(pos);
     }
 
-    void MoveCube(Vector3 touchPos)
+    void MoveCube(Vector3 pos)
     {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(touchPos);
-        worldPoint.y = 0;
-        cube.transform.position = worldPoint;
+        Debug.Log($"before {pos}");
+        // Vector3 worldPoint = Camera.main.ScreenToWorldPoint(pos);
+        // worldPoint.y = 0;
+        Debug.Log($"after {pos}");
+        // cube.transform.position = worldPoint;
+        cube.transform.position = pos;
     }
 }
