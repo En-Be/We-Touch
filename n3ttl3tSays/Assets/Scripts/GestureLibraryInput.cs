@@ -7,6 +7,7 @@ public class GestureLibraryInput : MonoBehaviour
     private GestureControl gestureControl;
     private Animator anim;
     public GameObject animTarget;
+    public MeshRenderer animTargetRenderer;
     private bool playing;
 
     void Awake()
@@ -25,6 +26,7 @@ public class GestureLibraryInput : MonoBehaviour
 
     public void PlayAGesture()
     {
+        animTargetRenderer.enabled = false;
         PlayAGestureForTracing();
         playing = true;
         StartCoroutine("StopAGesture");
@@ -33,6 +35,7 @@ public class GestureLibraryInput : MonoBehaviour
     private IEnumerator StopAGesture()
     {
         yield return new WaitForSeconds(2);
+        animTargetRenderer.enabled = true;
         playing = false;
     }
 

@@ -349,9 +349,25 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Winning:
 
 ![wip004](wip/wip004.gif)
+
+## Session 015
+
+**Fri Oct 25 18:03:20 - Fri Oct 25 18:39:56**
+
+**To do**
+- Change the cube to a sphere
+- deactivate target sphere mesh during game's turn
+- make more gesture sample animations
+
+**Done**
+- Cube to sphere
+- Set mesh renderer as a public variable, enabled and disabled it
+- Made three more sample gestures
+
 ---
 
 ## Tasks
 
+- choose from gestures randomly
 - Make editor view closer to device scaling
 - Add an automatic switch for input (editor/device)
