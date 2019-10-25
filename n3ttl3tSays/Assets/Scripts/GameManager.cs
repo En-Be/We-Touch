@@ -9,41 +9,85 @@ public class GameManager : MonoBehaviour
     public GestureLibraryInput gestureLibraryInput;
     public MouseInput mouseInput;
     public TouchInput touchInput;
+    public GestureTarget gestureTarget;
     
-    [Range(0, 100)]
-    public int difficulty;
+    public float difficulty;
 
+    private float startFrames;
+    private float finishFrames;
+    private float turnFrames;
     private int turnScore;
     private bool playerTurn;
 
-    void Awake()
+    void Start()
     {
-        NextTurn();
+        
     }
 
-    public void NextTurn()
+    public void StartTurn()
     {
         if(!playerTurn)
         {
-            Debug.Log("Tick");
-            gestureLibraryInput.PlayAGesture();
-            mouseInput.enabled = false;
-            touchInput.enabled = false;
+            StartGameTurn();
         }
         else
         {
-            Debug.Log("Tock");
-            mouseInput.enabled = true;
-            touchInput.enabled = true;
-            AssessAttemptToCopy();
+            StartPlayerTurn();
+        }
+    }
+
+    public void FinishTurn()
+    {
+        if(!playerTurn)
+        {
+            FinishGameTurn();
+        }
+        else
+        {
+            FinishPlayerTurn();
         }
         
         playerTurn = !playerTurn;
+    }
 
+    private void StartGameTurn()
+    {
+        Debug.Log("Tick");
+        gestureLibraryInput.PlayAGesture();
+        mouseInput.enabled = false;
+        touchInput.enabled = false;
+    }
+
+    private void StartPlayerTurn()
+    {
+        Debug.Log("Tock");
+        gestureTarget.Reset();
+        startFrames = Time.frameCount;
+        gestureLibraryInput.PlayAGestureForTracing();
+        mouseInput.enabled = true;
+        touchInput.enabled = true;
+    }
+
+    private void FinishGameTurn()
+    {
+
+    }
+
+    private void FinishPlayerTurn()
+    {
+        finishFrames = Time.frameCount;
+        turnFrames = finishFrames - startFrames;
+        Debug.Log($"frames this turn: {turnFrames}");
+        difficulty = turnFrames - Mathf.RoundToInt(turnFrames * 0.2f);
+        AssessAttemptToCopy();
     }
 
     private void AssessAttemptToCopy()
     {
+        turnScore = gestureTarget.Score();
+        Debug.Log($"difficulty this turn: {difficulty}");
+        Debug.Log($"score this turn: {turnScore}");
+
         if(turnScore < difficulty)
         {
             SceneManager.LoadScene("End");

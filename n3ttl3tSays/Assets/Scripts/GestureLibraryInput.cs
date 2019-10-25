@@ -19,21 +19,25 @@ public class GestureLibraryInput : MonoBehaviour
     {
         if(playing)
         {
-            Debug.Log(animTarget.transform.position);
             gestureControl.NewGesture(animTarget.transform.position);
         }
     }
 
     public void PlayAGesture()
     {
-        anim.SetTrigger("Play");
+        PlayAGestureForTracing();
         playing = true;
         StartCoroutine("StopAGesture");
     }
 
     private IEnumerator StopAGesture()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         playing = false;
+    }
+
+    public void PlayAGestureForTracing()
+    {
+        anim.SetTrigger("Play");
     }
 }

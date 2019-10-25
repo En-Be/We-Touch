@@ -20,11 +20,6 @@ public class GestureControl : MonoBehaviour
 
     void MoveCube(Vector3 pos)
     {
-        Debug.Log($"before {pos}");
-        // Vector3 worldPoint = Camera.main.ScreenToWorldPoint(pos);
-        // worldPoint.y = 0;
-        Debug.Log($"after {pos}");
-        // cube.transform.position = worldPoint;
         cube.transform.position = pos;
     }
 }

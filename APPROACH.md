@@ -316,6 +316,33 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Moved the worldpoint logic to only the relevant inputs
 - Disable touch and mouse inputs from game manager during game's turn
 - Made gamemanager trigger game's turn first
+
+## Session 014
+
+**Fri Oct 25 16:26:50 - Fri Oct 25 17:36:44**
+
+**To do**
+- Increase length of metronome and gestures
+- Play animations in the background of player's turn for comparison
+- Use collisions to detect tracing
+- Collisions add up to reach win condition
+
+**Done**
+- Increased turn length (manually, needs to be centralised)
+- Triggered the gesture to play but not send a vector
+- Gave the animatarget a collider
+- Renamed the animtarget to gesturetarget and gave it a script
+- Increase int(score) on gesturetarget during collisions
+- Add an event at the start of the metronome
+- Split logic between the events
+- Difficulty needs to be dynamic, based on frame count
+    - Measure it at the start of a player turn
+    - Measure it at the finish of a player turn
+    - Minus the start from the finish
+    - Difficulty = that minus 10% of it
+    - Made it 20% offset instead
+    - After playing on device, made it 40%
+
 ---
 
 ## Tasks

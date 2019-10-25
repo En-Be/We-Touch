@@ -12,9 +12,14 @@ public class Metronome : MonoBehaviour
         anim = gameObject.GetComponent(typeof(Animator)) as Animator;
     }
 
+    public void StartTurn()
+    {
+        gameManager.StartTurn();
+    }
+
     public void FinishTurn()
     {
-        gameManager.NextTurn();
+        gameManager.FinishTurn();
         anim.SetTrigger("Play");
     }
 }
