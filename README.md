@@ -64,6 +64,16 @@ I want to use Houdini for the effects
 
 ![UX](wip/UX_001.png)
 
+## MVP
+
+- **Losing.** In this gif the player cube doesn't follow the gesture accurately enough and the game ends:
+
+![wip003](wip/wip003.gif)
+
+- **Winning.** In the gif the player follows the gesture accurately enough for two turns:
+
+![wip004](wip/wip004.gif)
+
 ---
 
 ## Extension

@@ -342,7 +342,13 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - Difficulty = that minus 10% of it
     - Made it 20% offset instead
     - After playing on device, made it 40%
+- Losing:
 
+![wip003](wip/wip003.gif)
+
+- Winning:
+
+![wip004](wip/wip004.gif)
 ---
 
 ## Tasks
