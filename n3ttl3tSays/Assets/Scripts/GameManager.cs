@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     private void StartGameTurn()
     {
         Debug.Log("Tick");
-        gestureLibraryInput.PlayAGesture();
+        gestureLibraryInput.PlayingAGesture();
         mouseInput.enabled = false;
         touchInput.enabled = false;
     }
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Tock");
         gestureTarget.Reset();
         startFrames = Time.frameCount;
-        gestureLibraryInput.PlayAGestureForTracing();
+        gestureLibraryInput.TriggerGesture();
         mouseInput.enabled = true;
         touchInput.enabled = true;
     }

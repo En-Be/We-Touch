@@ -364,10 +364,27 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Set mesh renderer as a public variable, enabled and disabled it
 - Made three more sample gestures
 
+## Session 016
+
+**Wed Oct 30 15:46:20 - Wed Oct 30 17:02:55**
+
+**To do**
+- choose from gestures randomly
+    - make a list of gestures from folder
+    - directly assign it
+- add gestures to an list to iterate through each round
+
+
+**Done**
+- Tried getting all the gestures with AssetDatabase.LoadAllAssetsAtPath,didn't work
+- Resources folder is standard practice, switching to Resources.LoadAll("Gestures", typeof(Animation)), still doesn't work
+- Found can't add them manually either
+- Was declaring them as Animations, should have been AnimationClips
+- Trying to use animator overrides but not changing anything
+    - The actual clip name, not the state node, needs to be provided for override
 ---
 
 ## Tasks
 
-- choose from gestures randomly
 - Make editor view closer to device scaling
 - Add an automatic switch for input (editor/device)

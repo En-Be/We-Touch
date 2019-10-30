@@ -9,13 +9,26 @@ public class GestureLibraryInput : MonoBehaviour
     public GameObject animTarget;
     public MeshRenderer animTargetRenderer;
     private bool playing;
+    public Object[] gestures;
+    
+    protected AnimatorOverrideController animatorOverrideController;
+
 
     void Awake()
     {
         gestureControl = gameObject.GetComponent(typeof(GestureControl)) as GestureControl;
         anim = gameObject.GetComponent(typeof(Animator)) as Animator;
+        gestures = Resources.LoadAll("Gestures", typeof(AnimationClip));
+        foreach (var t in gestures)
+        {
+            Debug.Log(t.name);
+        }
+        
+        animatorOverrideController = new AnimatorOverrideController();
+		animatorOverrideController.runtimeAnimatorController = anim.runtimeAnimatorController;
+		
     }
-
+    
     void Update()
     {
         if(playing)
@@ -24,14 +37,28 @@ public class GestureLibraryInput : MonoBehaviour
         }
     }
 
-    public void PlayAGesture()
+    public void PlayingAGesture()
     {
         animTargetRenderer.enabled = false;
-        PlayAGestureForTracing();
+        animatorOverrideController["SampleA"] = ChooseAGesture();
+		anim.runtimeAnimatorController = animatorOverrideController;
+        Debug.Log(animatorOverrideController["SampleA"]);
+        TriggerGesture();
         playing = true;
         StartCoroutine("StopAGesture");
     }
 
+    public void TriggerGesture()
+    {
+        anim.SetTrigger("Play");
+    }
+
+    public AnimationClip ChooseAGesture()
+    {
+        AnimationClip gesture = (AnimationClip)gestures[Random.Range(0, gestures.Length)];
+        return gesture;
+    }
+    
     private IEnumerator StopAGesture()
     {
         yield return new WaitForSeconds(2);
@@ -39,8 +66,4 @@ public class GestureLibraryInput : MonoBehaviour
         playing = false;
     }
 
-    public void PlayAGestureForTracing()
-    {
-        anim.SetTrigger("Play");
-    }
 }
