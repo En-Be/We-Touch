@@ -382,6 +382,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Was declaring them as Animations, should have been AnimationClips
 - Trying to use animator overrides but not changing anything
     - The actual clip name, not the state node, needs to be provided for override
+
+## Session 017
+
+**Wed Oct 30 17:11:39 - Wed Oct 30 18:20:03**
+
+**To do**
+- Make it easier without trivialising it
+
+**Done**
+- Increased the collider size (difficulty adjustment)
+- Decreased the mesh size (aesthetic adjustment)
+- Decreased the difficulty of the game manager
+- Still too difficult, increase collider size again
+- The touch collider needs to only exist when the player is touching, or the difficulty is skewed by initial overlap
+- Deactivated pointer(mesh renderer and collider) unless there is a change in input position
+- Didn't work on device, only at first frame tap
+- Renamed difficulty to miss allowance
+- Set the pointer to off to start
+- Not sure why it isn't working on device, should be updating same as touch or library input
+
 ---
 
 ## Tasks

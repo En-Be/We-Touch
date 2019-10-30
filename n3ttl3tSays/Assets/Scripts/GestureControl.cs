@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class GestureControl : MonoBehaviour
 {
-    public GameObject cube;
+    public GameObject pointer;
 
-    public AnimationClip clip;
+    private Collider pointerCollider;
+    private MeshRenderer pointerRenderer;
 
-    void Awake()
+    void Start()
     {
-        clip = new AnimationClip();
+        pointerCollider = pointer.GetComponent(typeof(Collider)) as Collider;
+        pointerRenderer = pointer.GetComponent(typeof(MeshRenderer)) as MeshRenderer;
     }
 
     public void NewGesture(Vector3 pos)
     {
-        MoveCube(pos);
+        
+        if(pointer.transform.position == pos)
+        {
+            pointerRenderer.enabled = false;
+            pointerCollider.enabled = false;
+        }
+        else
+        {
+            MovePointer(pos);
+        }
     }
 
-    void MoveCube(Vector3 pos)
+    void MovePointer(Vector3 pos)
     {
-        cube.transform.position = pos;
+        pointer.transform.position = pos;
+        pointerRenderer.enabled = true;
+        pointerCollider.enabled = true;
     }
 }

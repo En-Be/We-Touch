@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
     public TouchInput touchInput;
     public GestureTarget gestureTarget;
     
-    public float difficulty;
+    [Range(0,1)]
+    public float missAllowance;
 
     private float startFrames;
     private float finishFrames;
     private float turnFrames;
+    private float winThreshhold;
     private int turnScore;
     private bool playerTurn;
 
@@ -78,17 +80,17 @@ public class GameManager : MonoBehaviour
         finishFrames = Time.frameCount;
         turnFrames = finishFrames - startFrames;
         Debug.Log($"frames this turn: {turnFrames}");
-        difficulty = turnFrames - Mathf.RoundToInt(turnFrames * 0.2f);
+        winThreshhold = turnFrames - Mathf.RoundToInt(turnFrames * missAllowance);
         AssessAttemptToCopy();
     }
 
     private void AssessAttemptToCopy()
     {
         turnScore = gestureTarget.Score();
-        Debug.Log($"difficulty this turn: {difficulty}");
+        Debug.Log($"win threshhold this turn: {winThreshhold}");
         Debug.Log($"score this turn: {turnScore}");
 
-        if(turnScore < difficulty)
+        if(turnScore < winThreshhold)
         {
             SceneManager.LoadScene("End");
         }

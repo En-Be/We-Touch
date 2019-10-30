@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 370996839}
   - component: {fileID: 370996838}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ SphereCollider:
   m_GameObject: {fileID: 370996837}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -362,7 +362,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370996837}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -756,7 +756,7 @@ MonoBehaviour:
   mouseInput: {fileID: 1805518472}
   touchInput: {fileID: 1805518470}
   gestureTarget: {fileID: 1745641795}
-  difficulty: 100
+  missAllowance: 0.4
 --- !u!4 &1109407194
 Transform:
   m_ObjectHideFlags: 0
@@ -903,7 +903,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1745641797
 Rigidbody:
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805518469}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f13e6d0224ddcc94c9281ddd5a0a0a93, type: 3}
   m_Name: 
@@ -993,8 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e30e1b78f9068840ba3e1300ff45c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 370996837}
-  clip: {fileID: 0}
+  pointer: {fileID: 370996837}
 --- !u!114 &1805518474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1055,7 @@ Transform:
   m_GameObject: {fileID: 2042210083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1745641794}
   m_RootOrder: 0
