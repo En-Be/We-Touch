@@ -9,6 +9,7 @@ public class GestureLibraryInput : MonoBehaviour
     public GameObject animTarget;
     public MeshRenderer animTargetRenderer;
     private bool playing;
+    private bool isMoving;
     public Object[] gestures;
     
     protected AnimatorOverrideController animatorOverrideController;
@@ -27,7 +28,7 @@ public class GestureLibraryInput : MonoBehaviour
     
     void Update()
     {
-        if(playing)
+        if(playing && isMoving)
         {
             gestureControl.UpdateGesture(animTarget.transform.position);
         }
@@ -35,6 +36,7 @@ public class GestureLibraryInput : MonoBehaviour
 
     public void PlayingAGesture()
     {
+        playing = true;
         animTargetRenderer.enabled = false;
         animatorOverrideController["SampleA"] = ChooseAGesture();
 		anim.runtimeAnimatorController = animatorOverrideController;
@@ -49,7 +51,8 @@ public class GestureLibraryInput : MonoBehaviour
 
     public void SwitchSendingGesturePos()
     {
-        playing = !playing;
+        isMoving = !isMoving;
+        // playing = !playing;
     }
 
     public AnimationClip ChooseAGesture()

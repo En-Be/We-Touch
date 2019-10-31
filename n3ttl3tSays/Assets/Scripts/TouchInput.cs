@@ -31,6 +31,7 @@ public class TouchInput : MonoBehaviour
             if(touch.phase == TouchPhase.Ended)
             {
                 Debug.Log("Touch Ended");
+                gestureControl.DisablePointer();
             }
         }
         

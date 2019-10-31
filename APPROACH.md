@@ -439,7 +439,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 020
 
-**Thu Oct 31 16:11:42 - Thu Oct 31 16:45:12**
+**Thu Oct 31 16:11:42 - Thu Oct 31 17:11:11**
 
 **To do**
 - Stop pointer flickering
@@ -450,7 +450,8 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     ![wip006](wip/wip006.png)
 
     The second event has to be two frames after the motion rests!
-
+- Made pointer turn off at the end of played gestures
+- Turned the pointer off when the touch ends
 
 ---
 

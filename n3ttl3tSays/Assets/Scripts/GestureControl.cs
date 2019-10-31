@@ -19,8 +19,7 @@ public class GestureControl : MonoBehaviour
     {
         if(pointer.transform.position == pos)
         {
-            pointerRenderer.enabled = false;
-            pointerCollider.enabled = false;
+            DisablePointer();
         }
         else
         {
@@ -33,5 +32,11 @@ public class GestureControl : MonoBehaviour
         pointerRenderer.enabled = true;
         pointerCollider.enabled = true;
         pointer.transform.position = pos;
+    }
+
+    public void DisablePointer()
+    {
+        pointerRenderer.enabled = false;
+        pointerCollider.enabled = false;
     }
 }
