@@ -19,10 +19,6 @@ public class GestureLibraryInput : MonoBehaviour
         gestureControl = gameObject.GetComponent(typeof(GestureControl)) as GestureControl;
         anim = gameObject.GetComponent(typeof(Animator)) as Animator;
         gestures = Resources.LoadAll("Gestures", typeof(AnimationClip));
-        // foreach (var t in gestures)
-        // {
-        //     Debug.Log(t.name);
-        // }
         
         animatorOverrideController = new AnimatorOverrideController();
 		animatorOverrideController.runtimeAnimatorController = anim.runtimeAnimatorController;
@@ -43,13 +39,17 @@ public class GestureLibraryInput : MonoBehaviour
         animatorOverrideController["SampleA"] = ChooseAGesture();
 		anim.runtimeAnimatorController = animatorOverrideController;
         TriggerGesture();
-        playing = true;
         StartCoroutine("StopAGesture");
     }
 
     public void TriggerGesture()
     {
         anim.SetTrigger("Play");
+    }
+
+    public void SwitchSendingGesturePos()
+    {
+        playing = !playing;
     }
 
     public AnimationClip ChooseAGesture()

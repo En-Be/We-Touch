@@ -756,7 +756,7 @@ MonoBehaviour:
   mouseInput: {fileID: 1805518472}
   touchInput: {fileID: 1805518470}
   gestureTarget: {fileID: 1745641795}
-  missAllowance: 0.4
+  missAllowance: 1
 --- !u!4 &1109407194
 Transform:
   m_ObjectHideFlags: 0

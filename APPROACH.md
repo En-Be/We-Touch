@@ -437,6 +437,21 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     ```
     - This made sure only the relevant input is available
 
+## Session 020
+
+**Thu Oct 31 16:11:42 - Thu Oct 31 16:45:12**
+
+**To do**
+- Stop pointer flickering
+
+**Done**
+- Added animation events manually to gestures, to turn on and off the position updates at relevant times
+    
+    ![wip006](wip/wip006.png)
+
+    The second event has to be two frames after the motion rests!
+
+
 ---
 
 ## Tasks
