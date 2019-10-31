@@ -458,3 +458,4 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 ## Tasks
 
 - Make editor view closer to device scaling
+- Change frame count to only include moving frames

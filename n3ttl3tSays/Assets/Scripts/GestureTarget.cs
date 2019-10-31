@@ -14,7 +14,6 @@ public class GestureTarget : MonoBehaviour
     void OnTriggerStay()
     {
         score++;
-        // Debug.Log(score);
     }
 
     public int Score()
