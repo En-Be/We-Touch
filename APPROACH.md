@@ -416,9 +416,29 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
     ![wip005](wip/wip005.png)
 
+## Session 019
+
+**Thu Oct 31 15:31:59 - Thu Oct 31 16:02:07**
+
+**To do**
+- Stop the method being triggered twice per frame
+
+**Done**
+- Add an automatic switch for input (editor/device)
+    - For activating input on player's turn
+
+    ```
+    #if UNITY_EDITOR
+            mouseInput.enabled = !mouseInput.enabled;
+    #elif UNITY_ANDROID
+            touchInput.enabled = !touchInput.enabled;
+            Debug.Log("touch input enabled");
+    #endif
+    ```
+    - This made sure only the relevant input is available
+
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
-- Add an automatic switch for input (editor/device)

@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Tick");
         gestureLibraryInput.PlayingAGesture();
-        mouseInput.enabled = false;
         touchInput.enabled = false;
     }
 
@@ -66,8 +65,7 @@ public class GameManager : MonoBehaviour
         gestureTarget.Reset();
         startFrames = Time.frameCount;
         gestureLibraryInput.TriggerGesture();
-        mouseInput.enabled = true;
-        touchInput.enabled = true;
+        ToggleInput();
     }
 
     private void FinishGameTurn()
@@ -77,6 +75,7 @@ public class GameManager : MonoBehaviour
 
     private void FinishPlayerTurn()
     {
+        ToggleInput();
         finishFrames = Time.frameCount;
         turnFrames = finishFrames - startFrames;
         Debug.Log($"frames this turn: {turnFrames}");
@@ -95,5 +94,14 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("End");
         }
 
+    }
+
+    private void ToggleInput()
+    {
+        #if UNITY_EDITOR
+            mouseInput.enabled = !mouseInput.enabled;
+        #elif UNITY_ANDROID
+            touchInput.enabled = !touchInput.enabled;
+        #endif
     }
 }

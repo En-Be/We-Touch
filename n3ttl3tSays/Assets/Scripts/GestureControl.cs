@@ -26,8 +26,6 @@ public class GestureControl : MonoBehaviour
         {
             MovePointer(pos);
         }
-        Debug.Log(pointerRenderer.enabled == true);
-        Debug.Log(Time.frameCount);
     }
 
     void MovePointer(Vector3 pos)
