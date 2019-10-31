@@ -3,7 +3,7 @@
 ## A pattern memory game
 
 The classic handheld flashing lights reimagined for touch screens.
-Initially a minimalist game but really the MVP for a series of interactive poems.
+Initially a minimalist game but really the base mechanic to be repurposed for a series of interactive poems.
 
 Please see the [approach](APPROACH.md) for details of my development process.
 
