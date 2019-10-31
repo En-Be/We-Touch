@@ -21,18 +21,19 @@ public class TouchInput : MonoBehaviour
             {
                 Debug.Log("Touch Began");
             }
-            
+
             Debug.Log($"Touching at X:{touch.position.x} and Y:{touch.position.y}");
             
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
             worldPoint.y = 0;
-            gestureControl.NewGesture(worldPoint);
+            gestureControl.UpdateGesture(worldPoint);
 
             if(touch.phase == TouchPhase.Ended)
             {
                 Debug.Log("Touch Ended");
             }
         }
+        
 
     }
 }

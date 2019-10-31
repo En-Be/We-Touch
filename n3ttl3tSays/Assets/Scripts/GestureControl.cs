@@ -15,9 +15,8 @@ public class GestureControl : MonoBehaviour
         pointerRenderer = pointer.GetComponent(typeof(MeshRenderer)) as MeshRenderer;
     }
 
-    public void NewGesture(Vector3 pos)
+    public void UpdateGesture(Vector3 pos)
     {
-        
         if(pointer.transform.position == pos)
         {
             pointerRenderer.enabled = false;
@@ -27,12 +26,14 @@ public class GestureControl : MonoBehaviour
         {
             MovePointer(pos);
         }
+        Debug.Log(pointerRenderer.enabled == true);
+        Debug.Log(Time.frameCount);
     }
 
     void MovePointer(Vector3 pos)
     {
-        pointer.transform.position = pos;
         pointerRenderer.enabled = true;
         pointerCollider.enabled = true;
+        pointer.transform.position = pos;
     }
 }

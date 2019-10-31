@@ -33,7 +33,7 @@ public class GestureLibraryInput : MonoBehaviour
     {
         if(playing)
         {
-            gestureControl.NewGesture(animTarget.transform.position);
+            gestureControl.UpdateGesture(animTarget.transform.position);
         }
     }
 

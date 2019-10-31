@@ -402,6 +402,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Set the pointer to off to start
 - Not sure why it isn't working on device, should be updating same as touch or library input
 
+## Session 018
+
+**Thu Oct 31 14:45:42 - Thu Oct 31 15:14:32**
+
+**To do**
+- Debug device input affecting pointer visibility
+
+**Done**
+- Trying to get visibility on when the renderer is disabled
+    - Maybe getting two calls to the update gesture method per frame from touch
+    - Logged the frame count and the mesh state to see that it is being triggered twice
+
+    ![wip005](wip/wip005.png)
+
 ---
 
 ## Tasks

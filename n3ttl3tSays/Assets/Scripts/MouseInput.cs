@@ -18,7 +18,7 @@ public class MouseInput : MonoBehaviour
         {
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPoint.y = 0;
-            gestureControl.NewGesture(worldPoint);
+            gestureControl.UpdateGesture(worldPoint);
         }
     }
 
