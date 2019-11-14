@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     [Range(0,1)]
     public float missAllowance;
 
-    private float startFrames;
-    private float finishFrames;
     private float turnFrames;
     private float winThreshhold;
     private int turnScore;
@@ -68,7 +66,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Tock");
         gestureTarget.Reset();
-        startFrames = Time.frameCount;
         gestureLibraryInput.TriggerGesture();
         ToggleInput();
     }
@@ -76,8 +73,7 @@ public class GameManager : MonoBehaviour
     private void FinishPlayerTurn()
     {
         ToggleInput();
-        finishFrames = Time.frameCount;
-        turnFrames = finishFrames - startFrames;
+        turnFrames = gestureTarget.gestureFrames;
         Debug.Log($"frames this turn: {turnFrames}");
         winThreshhold = turnFrames - Mathf.RoundToInt(turnFrames * missAllowance);
         AssessAttemptToCopy();

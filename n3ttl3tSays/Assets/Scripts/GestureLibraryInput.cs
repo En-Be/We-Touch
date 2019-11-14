@@ -37,7 +37,6 @@ public class GestureLibraryInput : MonoBehaviour
     public void PlayingAGesture()
     {
         playing = true;
-        animTargetRenderer.enabled = false;
         animatorOverrideController["SampleA"] = ChooseAGesture();
 		anim.runtimeAnimatorController = animatorOverrideController;
         TriggerGesture();
@@ -52,7 +51,7 @@ public class GestureLibraryInput : MonoBehaviour
     public void SwitchSendingGesturePos()
     {
         isMoving = !isMoving;
-        // playing = !playing;
+        animTargetRenderer.enabled = !animTargetRenderer.enabled;
     }
 
     public AnimationClip ChooseAGesture()
@@ -64,7 +63,6 @@ public class GestureLibraryInput : MonoBehaviour
     private IEnumerator StopAGesture()
     {
         yield return new WaitForSeconds(2);
-        animTargetRenderer.enabled = true;
         playing = false;
     }
 

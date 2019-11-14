@@ -10,19 +10,22 @@ public class GestureTarget : MonoBehaviour
     public int gestureFrames;
     private Vector3 previousPosition;
 
+    public void Start()
+    {
+        previousPosition = target.transform.position;
+    }
+
     public void Reset()
     {
         score = 0;
         gestureFrames = 0;
+        previousPosition = target.transform.position;
     }
 
     public void Update()
     {
-        if(previousPosition == target.transform.position)
-        {
-            Debug.Log("Not moving");
-        }
-        else
+
+        if(previousPosition != target.transform.position)
         {
             gestureFrames++;
             Debug.Log(gestureFrames);

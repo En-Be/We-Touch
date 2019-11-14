@@ -465,8 +465,23 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Refamiliarised myself with the scripts
 - Moved the logic to the gesture taget, not pointer
 
+## Session 022
+
+**Thu Nov 14 15:20:58 - Thu Nov 14 15:52:55**
+
+**To do**
+- Retrieve the gesture frame count
+- Update the difficulty handicap accordingly
+
+**Done**
+- Retrieve the gesture frame count
+- Turn off the target rendered when it isn't moving
+- Cleaned up some dead variables and logic
+- Tested the updated difficulty myself, and on someone else
+
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
+- Incremental chain of gestures, grows as player succeeds
