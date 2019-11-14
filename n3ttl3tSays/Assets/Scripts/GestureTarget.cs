@@ -28,7 +28,6 @@ public class GestureTarget : MonoBehaviour
         if(previousPosition != target.transform.position)
         {
             gestureFrames++;
-            Debug.Log(gestureFrames);
         }
         previousPosition = target.transform.position;
     }

@@ -34,17 +34,18 @@ public class GestureLibraryInput : MonoBehaviour
         }
     }
 
-    public void PlayingAGesture()
+    public void PlayingAGesture(AnimationClip gesture)
     {
         playing = true;
-        animatorOverrideController["SampleA"] = ChooseAGesture();
-		anim.runtimeAnimatorController = animatorOverrideController;
-        TriggerGesture();
+
+        TriggerGesture(gesture);
         StartCoroutine("StopAGesture");
     }
 
-    public void TriggerGesture()
+    public void TriggerGesture(AnimationClip gesture)
     {
+        animatorOverrideController["SampleA"] = gesture;
+		anim.runtimeAnimatorController = animatorOverrideController;
         anim.SetTrigger("Play");
     }
 

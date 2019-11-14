@@ -479,9 +479,33 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Cleaned up some dead variables and logic
 - Tested the updated difficulty myself, and on someone else
 
+![wip007](wip/wip007.gif)
+
+## Session 023
+
+**Thu Nov 14 16:12:00 - Thu Nov 14 17:32:00**
+
+**To do**
+- Incremental chain of gestures, grows as player succeeds
+    - List of gestures in sequence
+        - On game manager
+    - Add to them when a new one is picked each round
+        - Chosen from library
+    - Iterate through them each turn
+        - update a turn count incrementer
+
+**Done**
+- Game manager has an empty list at the start of a game
+- It chooses a gesture from the library and tells it to play it
+- Need to start and end rounds, not just turns
+    - Increasing and then resetting the beat counter addresses this
+- The sequences work, but there might be a bug with viewing the player input pointer
+    - Moved the appropriate finish player turn out of the conditional
+    - Renamed methods to avoid confusion with updated terminology
+
+![wip008](wip/wip008.gif)
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
-- Incremental chain of gestures, grows as player succeeds

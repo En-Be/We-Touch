@@ -56,7 +56,8 @@ I want to use Houdini for the effects
 ## Spec
 
 ### Terminology:
-- A turn: one short unit of time for making gestures, either the game's or the player's.
+- A beat: one run of the metronome, one gesture
+- A turn: one run through of a sequence of gestures, either the game's or the player's.
 - A round: two turns, the game's and the player's.
 - A sequence: a collection of turns. The length of this collection is the score.
 

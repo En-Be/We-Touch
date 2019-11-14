@@ -17,66 +17,86 @@ public class GameManager : MonoBehaviour
     private float turnFrames;
     private float winThreshhold;
     private int turnScore;
-    private bool playerTurn;
+    public bool playerTurn;
+
+    public List<AnimationClip> sequenceGestures;
+    public int sequenceBeat;
 
     void Start()
     {
-        
+        sequenceGestures = new List<AnimationClip>();
+        sequenceBeat = 0;
     }
 
     public void StartTurn()
     {
         if(!playerTurn)
         {
-            StartGameTurn();
+            StartGameBeat();
         }
         else
         {
-            StartPlayerTurn();
-        }
+            StartPlayerBeat();
+        }        
     }
 
     public void FinishTurn()
     {
         if(!playerTurn)
         {
-            FinishGameTurn();
+            FinishGameBeat();
         }
         else
         {
-            FinishPlayerTurn();
+            FinishPlayerBeat();
         }
         
-        playerTurn = !playerTurn;
     }
 
-    private void StartGameTurn()
+    private void StartGameBeat()
     {
         Debug.Log("Tick");
-        gestureLibraryInput.PlayingAGesture();
+        if(sequenceBeat == 0)
+        {
+            sequenceGestures.Add(gestureLibraryInput.ChooseAGesture());
+        }
+        gestureLibraryInput.PlayingAGesture(sequenceGestures[sequenceBeat]);
         touchInput.enabled = false;
     }
 
-    private void FinishGameTurn()
+    private void FinishGameBeat()
     {
-
+        sequenceBeat++;
+        if(sequenceBeat == sequenceGestures.Count)
+        {
+            playerTurn = !playerTurn;
+            sequenceBeat = 0;
+        }
     }
 
-    private void StartPlayerTurn()
+    private void StartPlayerBeat()
     {
         Debug.Log("Tock");
         gestureTarget.Reset();
-        gestureLibraryInput.TriggerGesture();
+        gestureLibraryInput.TriggerGesture(sequenceGestures[sequenceBeat]);
         ToggleInput();
     }
 
-    private void FinishPlayerTurn()
+    private void FinishPlayerBeat()
     {
+        sequenceBeat++;
         ToggleInput();
         turnFrames = gestureTarget.gestureFrames;
         Debug.Log($"frames this turn: {turnFrames}");
         winThreshhold = turnFrames - Mathf.RoundToInt(turnFrames * missAllowance);
         AssessAttemptToCopy();
+        
+        if(sequenceBeat == sequenceGestures.Count)
+        {
+            
+            playerTurn = !playerTurn;
+            sequenceBeat = 0;
+        }
     }
 
     private void AssessAttemptToCopy()
