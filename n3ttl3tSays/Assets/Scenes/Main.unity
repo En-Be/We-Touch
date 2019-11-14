@@ -892,6 +892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf493ed033f35843b57ece0f47999e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 2042210083}
+  gestureFrames: 0
 --- !u!135 &1745641796
 SphereCollider:
   m_ObjectHideFlags: 0

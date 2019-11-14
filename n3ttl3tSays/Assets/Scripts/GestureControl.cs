@@ -39,4 +39,5 @@ public class GestureControl : MonoBehaviour
         pointerRenderer.enabled = false;
         pointerCollider.enabled = false;
     }
+
 }

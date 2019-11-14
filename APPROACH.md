@@ -453,9 +453,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Made pointer turn off at the end of played gestures
 - Turned the pointer off when the touch ends
 
+## Session 021
+
+**Thu Nov 14 14:42:02 - Thu Nov 14 15:10:21**
+
+**To do**
+- Change frame count to only include moving frames 
+    - Move the frame count logic to the gesture controller
+
+**Done**
+- Refamiliarised myself with the scripts
+- Moved the logic to the gesture taget, not pointer
+
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
-- Change frame count to only include moving frames

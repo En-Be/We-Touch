@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
         touchInput.enabled = false;
     }
 
+    private void FinishGameTurn()
+    {
+
+    }
+
     private void StartPlayerTurn()
     {
         Debug.Log("Tock");
@@ -66,11 +71,6 @@ public class GameManager : MonoBehaviour
         startFrames = Time.frameCount;
         gestureLibraryInput.TriggerGesture();
         ToggleInput();
-    }
-
-    private void FinishGameTurn()
-    {
-
     }
 
     private void FinishPlayerTurn()
