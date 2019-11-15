@@ -12,10 +12,19 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
+        if(!PlayerPrefs.HasKey("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore", 0);
+        }
+
         scoreManager = FindObjectOfType<ScoreManager>();
         if(scoreManager != null)
         {
             scoreText.text = scoreManager.score.ToString();
+        }
+        else
+        {
+            scoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
         }
     }
 
@@ -27,5 +36,10 @@ public class Menu : MonoBehaviour
             Destroy(scoreManager.gameObject);
         }
         SceneManager.LoadScene(goesTo);
+    }
+
+    public void LoadInstructions()
+    {
+
     }
 }

@@ -523,9 +523,30 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ![wip009](wip/wip009.png)
 
+## Session 025
+
+**Fri Nov 15 17:13:48 - Fri Nov 15 17:57:07**
+
+**To do**
+- Add highscore to main screen
+
+**Done**
+- Store the score in playerprefs if it is higher than the current stored score
+- Display the score on the start menu
+- Increased the metronome width for visibility
+- Changed the start button hover colour
+- Rearranged the score texts
+- Tested on device
+- Rearranged the score texts again
+
+![wip010](wip/wip010.png)
+![wip011](wip/wip011.png)
+![wip012](wip/wip012.png)
+
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
 - Make it visibly obvious whose turn it is
+- Add an instructions scene
