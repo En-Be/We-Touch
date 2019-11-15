@@ -504,8 +504,28 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - Renamed methods to avoid confusion with updated terminology
 
 ![wip008](wip/wip008.gif)
+
+## Session 024
+
+**Fri Nov 15 15:20:31 - Fri Nov 15 15:49:03**
+
+**To do**
+- Add score to lose screen
+- Add highscore to main screen
+
+**Done**
+- Made a ScoreManager object to carry the score across scenes
+- Made a ScoreManager script on the empty
+    - Set it to not destroy on load
+    - Game Manager knows it and sets its score
+    - Menu script deletes it at button press
+    - End menu UI text is set to be score
+
+![wip009](wip/wip009.png)
+
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
+- Make it visibly obvious whose turn it is

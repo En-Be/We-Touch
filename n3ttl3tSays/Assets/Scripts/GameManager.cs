@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public ScoreManager scoreManager;
     public GestureLibraryInput gestureLibraryInput;
     public MouseInput mouseInput;
     public TouchInput touchInput;
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
 
         if(turnScore < winThreshhold)
         {
+            scoreManager.SetScore(sequenceGestures.Count);
             SceneManager.LoadScene("End");
         }
 
