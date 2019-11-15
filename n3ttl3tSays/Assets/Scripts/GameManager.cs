@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public MouseInput mouseInput;
     public TouchInput touchInput;
     public GestureTarget gestureTarget;
-    
+    public Metronome metronome;
+
     [Range(0,1)]
     public float missAllowance;
 
@@ -68,11 +69,8 @@ public class GameManager : MonoBehaviour
     private void FinishGameBeat()
     {
         sequenceBeat++;
-        if(sequenceBeat == sequenceGestures.Count)
-        {
-            playerTurn = !playerTurn;
-            sequenceBeat = 0;
-        }
+
+        CheckWhoseTurnItIs();
     }
 
     private void StartPlayerBeat()
@@ -91,13 +89,8 @@ public class GameManager : MonoBehaviour
         Debug.Log($"frames this turn: {turnFrames}");
         winThreshhold = turnFrames - Mathf.RoundToInt(turnFrames * missAllowance);
         AssessAttemptToCopy();
-        
-        if(sequenceBeat == sequenceGestures.Count)
-        {
-            
-            playerTurn = !playerTurn;
-            sequenceBeat = 0;
-        }
+
+        CheckWhoseTurnItIs();
     }
 
     private void AssessAttemptToCopy()
@@ -112,6 +105,16 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("End");
         }
 
+    }
+
+    private void CheckWhoseTurnItIs()
+    {
+        if(sequenceBeat == sequenceGestures.Count)
+        {
+            playerTurn = !playerTurn;
+            metronome.ChangeTurn();
+            sequenceBeat = 0;
+        }
     }
 
     private void ToggleInput()

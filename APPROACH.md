@@ -543,10 +543,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 ![wip011](wip/wip011.png)
 ![wip012](wip/wip012.png)
 
+## Session 026
+
+**Fri Nov 15 18:30:51 - Fri Nov 15 19:04:18**
+
+**To do**
+- Make it visibly obvious whose turn it is
+    - Add lines in the corner that point in on the game's turn, and out on the player's turn
+
+**Done**
+- Added UI images in the corners
+- Refactored the game manager logic checking whose turn it is
+- Game manager triggers metronome points on turn change
+    - Works, but should happen at start of turn not the end
+    - Game manager flips a bool, which is checked by metronome at beat's start
+- Renamed metronome methods to new terminology
+
+![wip013](wip/wip013.gif)
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
-- Make it visibly obvious whose turn it is
 - Add an instructions scene
