@@ -606,6 +606,23 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Particles die after one second
 - Works on phone
 
+## Session 030
+
+**Mon Feb 10 15:59:02 - 
+
+**To do**
+- Particle sequence design
+
+**Done**
+- Particle phases design
+    - Each phase has a cycle of three beats
+    - colours cycle through blue, red, yellow
+    - new particle type each phase
+    - type 1: circles that shrink and fade. they start bigger on each beat
+    - type 2: circles that move away randomly, some shrink some grow, and fade. they move quicker, start bigger on each beat
+    - type 3: circles that move away in lines, leaving a trail, grow and fade. they move quicker, start bigger on each beat
+    - type 4: circles that move away spawning crystals, fade. they spread further by moving quicker on each beat
+- Particles now fade
 ---
 
 ## Tasks

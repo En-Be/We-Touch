@@ -15,4 +15,13 @@ public class Particle : MonoBehaviour
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
+
+    private float fadePerSecond = 1f;
+ 
+    private void Update() 
+    {
+        var material = GetComponentInChildren<Renderer>().material;
+        var color = material.color;
+        material.color = new Color(color.r, color.g, color.b, color.a - (fadePerSecond * Time.deltaTime));
+    }
 }
