@@ -10,6 +10,8 @@ public class GestureTarget : MonoBehaviour
     public int gestureFrames;
     private Vector3 previousPosition;
 
+    public ParticleManager particles;
+    
     public void Start()
     {
         previousPosition = target.transform.position;
@@ -35,6 +37,7 @@ public class GestureTarget : MonoBehaviour
     void OnTriggerStay()
     {
         score++;
+        // call particle emitter here
     }
 
     public int Score()

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public TouchInput touchInput;
     public GestureTarget gestureTarget;
     public Metronome metronome;
+    public ParticleManager particles;
 
     [Range(0,1)]
     public float missAllowance;
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
         {
             sequenceGestures.Add(gestureLibraryInput.ChooseAGesture());
         }
+        // update particle system level here
         gestureLibraryInput.PlayingAGesture(sequenceGestures[sequenceBeat]);
         touchInput.enabled = false;
     }
@@ -69,7 +71,6 @@ public class GameManager : MonoBehaviour
     private void FinishGameBeat()
     {
         sequenceBeat++;
-
         CheckWhoseTurnItIs();
     }
 
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Tock");
         gestureTarget.Reset();
         gestureLibraryInput.TriggerGesture(sequenceGestures[sequenceBeat]);
+        // update particle system beat here
         ToggleInput();
     }
 

@@ -562,7 +562,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 ![wip013](wip/wip013.gif)
 ---
 
+## Session 027
+
+**Mon Feb 10 13:48:26 - Mon Feb 10 14:15:40**
+
+**To do**
+- Refamiliarise myself with the project
+    - Control flow diagram
+
+**Done**
+- Made a particle manager object with script
+- Referenced the particle manager script in GameManager and GestureTarget
+- Placed comments in the other scripts where they need to call the particle maker
+- Made updatelevel, updatebeat and emit methods
+
 ## Tasks
 
 - Make editor view closer to device scaling
 - Add an instructions scene
+- Add particle emitter system
