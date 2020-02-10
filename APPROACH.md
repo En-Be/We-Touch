@@ -608,7 +608,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 030
 
-**Mon Feb 10 15:59:02 - 
+**Mon Feb 10 15:59:02 - Mon Feb 10 17:05:52**
 
 **To do**
 - Particle sequence design
