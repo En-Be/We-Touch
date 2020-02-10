@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GestureTarget : MonoBehaviour
 {
+    public GameManager gameManager;
+
     private int score;
     public GameObject target;
 
@@ -11,7 +13,7 @@ public class GestureTarget : MonoBehaviour
     private Vector3 previousPosition;
 
     public ParticleManager particles;
-    
+
     public void Start()
     {
         previousPosition = target.transform.position;
@@ -37,7 +39,7 @@ public class GestureTarget : MonoBehaviour
     void OnTriggerStay()
     {
         score++;
-        // call particle emitter here
+        gameManager.Emit(transform.position);
     }
 
     public int Score()

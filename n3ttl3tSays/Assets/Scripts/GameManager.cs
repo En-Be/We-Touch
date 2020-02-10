@@ -63,7 +63,6 @@ public class GameManager : MonoBehaviour
         {
             sequenceGestures.Add(gestureLibraryInput.ChooseAGesture());
         }
-        // update particle system level here
         gestureLibraryInput.PlayingAGesture(sequenceGestures[sequenceBeat]);
         touchInput.enabled = false;
     }
@@ -79,7 +78,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Tock");
         gestureTarget.Reset();
         gestureLibraryInput.TriggerGesture(sequenceGestures[sequenceBeat]);
-        // update particle system beat here
         ToggleInput();
     }
 
@@ -126,5 +124,13 @@ public class GameManager : MonoBehaviour
         #elif UNITY_ANDROID
             touchInput.enabled = !touchInput.enabled;
         #endif
+    }
+
+    public void Emit(Vector3 position)
+    {
+        if(playerTurn)
+        {
+            particles.Emit(position, sequenceGestures.Count, sequenceBeat);
+        }
     }
 }

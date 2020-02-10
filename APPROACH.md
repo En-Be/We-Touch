@@ -576,6 +576,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Placed comments in the other scripts where they need to call the particle maker
 - Made updatelevel, updatebeat and emit methods
 
+## Session 028
+
+**Mon Feb 10 14:21:07 - Mon Feb 10 14:53:21**
+
+**To do**
+- Call methods from managers
+- Emit basic particles that die
+- Encapsulate control in the game manager
+
+**Done**
+- Removed dupication of data across game and particle managers
+- collider triggers emit on gamemanager, who checks whose turn it is before passing on the method call
+- Made a particle with a script, added it in particle manager as a prefab
+- collider passes it's position for emission
+- game manager sends position for emission
+- particles emit and crash editor
+
+
+---
+
 ## Tasks
 
 - Make editor view closer to device scaling

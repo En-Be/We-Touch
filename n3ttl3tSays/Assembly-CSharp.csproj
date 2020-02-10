@@ -62,6 +62,8 @@
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Metronome.cs" />
      <Compile Include="Assets\Scripts\MouseInput.cs" />
+     <Compile Include="Assets\Scripts\Particle.cs" />
+     <Compile Include="Assets\Scripts\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\TouchInput.cs" />
  <Reference Include="Unity.Timeline.Editor">

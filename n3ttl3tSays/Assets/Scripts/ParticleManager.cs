@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class ParticleManager : MonoBehaviour
 {
+    public GameObject particle;
 
-    public void UpdateLevel()
+    public void Emit(Vector3 position, int level, int beat)
     {
-
-    }
-
-    public void UpdateBeat()
-    {
-
-    }
-    
-    public void Emit()
-    {
-
+        Debug.Log($"Level is #{level} and beat is#{beat}");
+        Instantiate(particle, position, transform.rotation);
     }
 }

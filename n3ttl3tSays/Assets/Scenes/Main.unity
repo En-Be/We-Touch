@@ -1176,6 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf493ed033f35843b57ece0f47999e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1109407193}
   target: {fileID: 2042210083}
   gestureFrames: 0
   particles: {fileID: 1990575279}
@@ -1344,6 +1345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945856cf326534343b8ee57e90d1ade6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 3086071913829603007, guid: adcc543f558284845adf8ee2ada758c1,
+    type: 3}
 --- !u!4 &1990575280
 Transform:
   m_ObjectHideFlags: 0
