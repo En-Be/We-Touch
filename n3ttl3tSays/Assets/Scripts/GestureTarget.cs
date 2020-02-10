@@ -12,8 +12,6 @@ public class GestureTarget : MonoBehaviour
     public int gestureFrames;
     private Vector3 previousPosition;
 
-    public ParticleManager particles;
-
     public void Start()
     {
         previousPosition = target.transform.position;

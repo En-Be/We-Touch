@@ -7,12 +7,12 @@ public class Particle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine (CountDown());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator CountDown()
     {
-        
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }

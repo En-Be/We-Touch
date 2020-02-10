@@ -9,7 +9,7 @@ public class GestureLibraryInput : MonoBehaviour
     public GameObject animTarget;
     public MeshRenderer animTargetRenderer;
     private bool playing;
-    private bool isMoving;
+    public bool isMoving;
     public Object[] gestures;
     
     protected AnimatorOverrideController animatorOverrideController;

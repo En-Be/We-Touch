@@ -593,6 +593,18 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - game manager sends position for emission
 - particles emit and crash editor
 
+## Session 029
+
+**Mon Feb 10 15:03:51 - Mon Feb 10 15:44:19**
+
+**To do**
+- Find out why it crashes and fix it
+- Test on device
+
+**Done**
+- The colliders on the particles were triggering emission of each other, exponentially
+- Particles die after one second
+- Works on phone
 
 ---
 

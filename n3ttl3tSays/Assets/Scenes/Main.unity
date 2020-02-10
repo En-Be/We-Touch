@@ -370,8 +370,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284304341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -202, y: -281, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370053538}
@@ -993,7 +993,7 @@ MonoBehaviour:
   gestureTarget: {fileID: 1745641795}
   metronome: {fileID: 370053540}
   particles: {fileID: 1990575279}
-  missAllowance: 1
+  missAllowance: 0.4
   playerTurn: 0
   sequenceGestures: []
   sequenceBeat: 0
@@ -1179,7 +1179,6 @@ MonoBehaviour:
   gameManager: {fileID: 1109407193}
   target: {fileID: 2042210083}
   gestureFrames: 0
-  particles: {fileID: 1990575279}
 --- !u!135 &1745641796
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1296,6 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animTarget: {fileID: 1745641793}
   animTargetRenderer: {fileID: 2042210086}
+  isMoving: 0
   gestures: []
 --- !u!95 &1805518475
 Animator:
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945856cf326534343b8ee57e90d1ade6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 3086071913829603007, guid: adcc543f558284845adf8ee2ada758c1,
+  particle: {fileID: 5199595767400295370, guid: adcc543f558284845adf8ee2ada758c1,
     type: 3}
 --- !u!4 &1990575280
 Transform:

@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
 
     public void Emit(Vector3 position)
     {
-        if(playerTurn)
+        if(playerTurn && gestureLibraryInput.isMoving)
         {
             particles.Emit(position, sequenceGestures.Count, sequenceBeat);
         }
