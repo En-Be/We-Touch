@@ -86,7 +86,7 @@ This is a game on it's own, but also the mechanical basis/ MVP for a series of a
 - The gestures will be designed as less or more difficult by their length, ergonomics(placement, divisions and directions) and speed.
 - Difficulty will also be determined by how precise the player's position and timing of there gestures must be.
 - The player's turns will animate the audiovisual elements of the interactive poem, if played correctly.
-
+- Rules of a piece: composed of sequences that are straight ahead (one beat, copy it and onto the next or fail and loop), or accumulative (like the base game). Can have checkpoints, the ends of completed sequences, so pieces are composed of sequences.
 And then much further down the line, as VR pieces:
 - 3D gestures
 - Haptic feedback and outward-facing camera sharing/integration when moving in sync with other remote networked players
