@@ -1347,6 +1347,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 5199595767400295370, guid: adcc543f558284845adf8ee2ada758c1,
     type: 3}
+  beatColour:
+  - {fileID: 2100000, guid: bfcc303d0bbd43f4aa7b6066f5b3a7ba, type: 2}
+  - {fileID: 2100000, guid: 3e180623e248e5b4188a97c3bf3c553d, type: 2}
+  - {fileID: 2100000, guid: 9e8c8ae77c7c3764e87420d2d33bb710, type: 2}
+  instance: {fileID: 0}
+  instanceScript: {fileID: 0}
 --- !u!4 &1990575280
 Transform:
   m_ObjectHideFlags: 0

@@ -4,24 +4,35 @@ using UnityEngine;
 
 public class Particle : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float fadePerSecond = 1f;
+    private float transformScale;
+    private Material material;
+    private Renderer rend;
+    private Color colour;
+
     void Start()
     {
         StartCoroutine (CountDown());
+        transformScale = fadePerSecond * transform.localScale.x;
+        material = GetComponentInChildren<Renderer>().material;
     }
 
     private IEnumerator CountDown()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(4);
         Destroy(gameObject);
     }
 
-    private float fadePerSecond = 1f;
- 
     private void Update() 
     {
-        var material = GetComponentInChildren<Renderer>().material;
         var color = material.color;
         material.color = new Color(color.r, color.g, color.b, color.a - (fadePerSecond * Time.deltaTime));
+        transform.localScale = new Vector3(transform.localScale.x - (transformScale * Time.deltaTime), transform.localScale.y - (transformScale * Time.deltaTime), transform.localScale.z - (transformScale * Time.deltaTime));
+    }
+
+    public void BeatColour(Material beatColour)
+    {
+        rend = GetComponentInChildren<Renderer>();
+        rend.material = beatColour;
     }
 }

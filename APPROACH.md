@@ -623,10 +623,23 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - type 3: circles that move away in lines, leaving a trail, grow and fade. they move quicker, start bigger on each beat
     - type 4: circles that move away spawning crystals, fade. they spread further by moving quicker on each beat
 - Particles now fade
+
+## Session 031
+
+**Tue Feb 11 12:13:40 - Tue Feb 11 13:12:28**
+
+**To do**
+- Scale change control of particles
+- Change colour or particles in sequence
+
+**Done**
+- Particles start bigger and shrink
+- Particles change colour in sequence, but only for first three. Need to reset the array counter
+
 ---
 
 ## Tasks
 
 - Make editor view closer to device scaling
 - Add an instructions scene
-- Add particle emitter system
+- Continue with particle phase implementing
