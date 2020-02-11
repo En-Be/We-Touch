@@ -19,7 +19,7 @@ public class Particle : MonoBehaviour
 
     private IEnumerator CountDown()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 

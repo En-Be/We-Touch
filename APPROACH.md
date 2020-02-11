@@ -636,6 +636,16 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Particles start bigger and shrink
 - Particles change colour in sequence, but only for first three. Need to reset the array counter
 
+## Session 032
+
+**Tue Feb 11 13:23:43 - Tue Feb 11 13:52:23**
+
+**To do**
+- Make sequence loop through materials
+
+**Done**
+- Sequences loop through the three materials
+
 ---
 
 ## Tasks
