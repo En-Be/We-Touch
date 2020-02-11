@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public ScoreManager scoreManager;
     public GestureLibraryInput gestureLibraryInput;
+    public GestureControl gestureControl;
     public MouseInput mouseInput;
     public TouchInput touchInput;
     public GestureTarget gestureTarget;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartTurn()
-    {
+    {        
         if(!playerTurn)
         {
             StartGameBeat();
@@ -40,7 +41,8 @@ public class GameManager : MonoBehaviour
         else
         {
             StartPlayerBeat();
-        }        
+        }       
+         
     }
 
     public void FinishTurn()
@@ -53,7 +55,6 @@ public class GameManager : MonoBehaviour
         {
             FinishPlayerBeat();
         }
-        
     }
 
     private void StartGameBeat()
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
         {
             playerTurn = !playerTurn;
             metronome.ChangeTurn();
+            gestureControl.FlipTurn();
             sequenceBeat = 0;
         }
     }

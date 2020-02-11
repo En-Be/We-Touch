@@ -646,6 +646,19 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 **Done**
 - Sequences loop through the three materials
 
+## Session 033
+
+**Tue Feb 11 14:02:02 - Tue Feb 11 14:31:14**
+
+**To do**
+- Remove corner details
+- Change background colour on game and player turns
+- turn off pointer renderer for player turn
+
+**Done**
+- Background is black for game turn, white for player
+- pointer is only on for game's turn
+
 ---
 
 ## Tasks

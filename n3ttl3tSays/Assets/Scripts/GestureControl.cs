@@ -8,6 +8,7 @@ public class GestureControl : MonoBehaviour
 
     private Collider pointerCollider;
     private MeshRenderer pointerRenderer;
+    private bool gameTurn = true;
 
     void Start()
     {
@@ -29,7 +30,10 @@ public class GestureControl : MonoBehaviour
 
     void MovePointer(Vector3 pos)
     {
-        pointerRenderer.enabled = true;
+        if(gameTurn)
+        {
+            pointerRenderer.enabled = true;
+        }
         pointerCollider.enabled = true;
         pointer.transform.position = pos;
     }
@@ -39,5 +43,8 @@ public class GestureControl : MonoBehaviour
         pointerRenderer.enabled = false;
         pointerCollider.enabled = false;
     }
-
+    public void FlipTurn()
+    {
+        gameTurn = !gameTurn;
+    }
 }

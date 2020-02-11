@@ -8,7 +8,6 @@ public class GestureTarget : MonoBehaviour
 
     private int score;
     public GameObject target;
-
     public int gestureFrames;
     private Vector3 previousPosition;
 

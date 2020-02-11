@@ -5,8 +5,10 @@ using UnityEngine;
 public class Metronome : MonoBehaviour
 {
     public GameManager gameManager;
+    public Camera cam;
+    public Color black;
+    public Color white;
     private Animator anim;
-    public GameObject[] cornerPoints;
     private bool IsChangingTurn;
 
     void Start()
@@ -18,10 +20,7 @@ public class Metronome : MonoBehaviour
     {
         if(IsChangingTurn)
         {
-            foreach(GameObject point in cornerPoints)
-            {
-                point.gameObject.transform.Rotate(0,0,90);
-            }
+            ChangeBackgroundColour();
             IsChangingTurn = false;
         }
 
@@ -37,5 +36,17 @@ public class Metronome : MonoBehaviour
     public void ChangeTurn()
     {
         IsChangingTurn = true;
+    }
+
+    private void ChangeBackgroundColour()
+    {
+        if (cam.backgroundColor == black)
+        {
+            cam.backgroundColor = white;
+        }
+        else
+        {
+            cam.backgroundColor = black;
+        }
     }
 }
