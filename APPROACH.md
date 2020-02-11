@@ -659,6 +659,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Background is black for game turn, white for player
 - pointer is only on for game's turn
 
+## Session 034
+
+**Tue Feb 11 17:20:10 - 
+
+**To do**
+- Increase size of particles over cycle
+- Gifs of progress
+- Next particle type
+
+**Done**
+- Size increases through cycle, then resets
+- gif, see below
+- set up particles ready to have different behaviour based on type
+
+![wip014](wip/wip014.gif)
+
 ---
 
 ## Tasks
