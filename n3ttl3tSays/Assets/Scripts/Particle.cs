@@ -30,7 +30,8 @@ public class Particle : MonoBehaviour
     private void Update() 
     {
         var color = material.color;
-        material.color = new Color(color.r, color.g, color.b, color.a - (fadePerSecond * Time.deltaTime));
+        material.color = new Color(color.r + (5 * Time.deltaTime), color.g + (5 * Time.deltaTime), color.b + (5 * Time.deltaTime), color.a);
+        // material.color = new Color(color.r, color.g, color.b, color.a - (fadePerSecond * Time.deltaTime));
         // transform.localScale = new Vector3(transform.localScale.x - (transformScale * Time.deltaTime), transform.localScale.y - (transformScale * Time.deltaTime), transform.localScale.z - (transformScale * Time.deltaTime));
         TypeBehaviour();
     }

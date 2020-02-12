@@ -688,6 +688,18 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ![wip015](wip/wip015.gif)
 
+## Session 036
+
+**Wed Feb 12 16:04:28 - Wed Feb 12 16:27:32**
+
+**To do**
+- Make colours fade to white instead of transparent
+
+**Done**
+- Colours fade to white
+- Borders are thinner
+- Colours start less saturated
+
 ---
 
 ## Tasks
