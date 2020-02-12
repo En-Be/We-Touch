@@ -11,7 +11,7 @@ public class ParticleManager : MonoBehaviour
 
     private int count = 0;
     private int currentBeat = 0;
-    private int size = 3;
+    private float size = 3;
 
     public void Emit(Vector3 position, int beat)
     {
@@ -19,20 +19,20 @@ public class ParticleManager : MonoBehaviour
         {
             count++;
             currentBeat = beat;
-            size *= 3;
+            size *= 2.5f;
         }
 
         if(count > 2)
         {
             count = 0;
-            size = 3;
+            size = 3f;
         }
 
         if(beat == 0)
         {
             count = 0;
             currentBeat = 0;
-            size = 3;
+            size = 3f;
         }
 
         Debug.Log($"beat is {beat}, currentBeat is {currentBeat}, count is {count}");

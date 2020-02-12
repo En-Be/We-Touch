@@ -661,7 +661,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 034
 
-**Tue Feb 11 17:20:10 - 
+**Tue Feb 11 17:20:10 - Tue Feb 11 17:50:10**
 
 **To do**
 - Increase size of particles over cycle
@@ -675,6 +675,19 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ![wip014](wip/wip014.gif)
 
+## Session 035
+
+**Wed Feb 12 14:31:46 - Wed Feb 12 15:47:01**
+
+**To do**
+- Particles type 2
+
+**Done**
+- Particles type 2 move away in random directions
+- Particles type 2 scale randomly either up or down
+
+![wip015](wip/wip015.gif)
+
 ---
 
 ## Tasks
@@ -682,3 +695,5 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Make editor view closer to device scaling
 - Add an instructions scene
 - Continue with particle phase implementing
+- Make a tool for me to record my finger movements and add them to the gesture library
+- Redesign (colour, sizes, font)
