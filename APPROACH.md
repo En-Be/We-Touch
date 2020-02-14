@@ -700,6 +700,19 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Borders are thinner
 - Colours start less saturated
 
+
+## Session 037
+
+**Fri Feb 14 14:43:54 - Fri Feb 14 15:13:30**
+
+**To do**
+- lock device rotation
+- particle type 3
+
+**Done**
+- Rotation locked to portrait
+- Tried particles calling emitter method on manager but slows down framerate too much
+
 ---
 
 ## Tasks

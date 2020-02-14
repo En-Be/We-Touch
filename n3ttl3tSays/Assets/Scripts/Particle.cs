@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Particle : MonoBehaviour
 {
+    private ParticleManager particleManager;
     private float fadePerSecond = 1f;
     private float transformScale;
     private Material material;
@@ -19,6 +20,12 @@ public class Particle : MonoBehaviour
         transformScale = fadePerSecond * transform.localScale.x;
         material = GetComponentInChildren<Renderer>().material;
         TypeSetup();
+    }
+
+    public void SetManager(ParticleManager pManager)
+    {
+        particleManager = pManager;
+        Debug.Log(particleManager);
     }
 
     private IEnumerator CountDown()
@@ -46,7 +53,7 @@ public class Particle : MonoBehaviour
     {
         if(beat < 3)
         {
-            type = 1;
+            type = 3;
         }
         else if(beat < 6)
         {
@@ -54,7 +61,7 @@ public class Particle : MonoBehaviour
         }
         else if(beat < 9)
         {
-            type = 3;
+            type = 1;
         }
         else
         {
@@ -76,6 +83,8 @@ public class Particle : MonoBehaviour
                 break;
             case 3:
                 Debug.Log("type 3");
+                transform.Rotate(0.0f, ChooseAngle(360), 0.0f, Space.Self);
+                upOrDown = ChooseUpOrDown();
                 break;
             case 4:
                 Debug.Log("type 4");
@@ -88,18 +97,19 @@ public class Particle : MonoBehaviour
         switch (type)
         {
             case 1:
-                // transform.localScale = new Vector3(transform.localScale.x - (transformScale * Time.deltaTime), transform.localScale.y - (transformScale * Time.deltaTime), transform.localScale.z - (transformScale * Time.deltaTime));
                 transform.localScale = ChooseScale(1);
                 Debug.Log(Random.Range(-1, 1));
                 break;
             case 2:
                 transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 8)));
                 transform.Rotate((angle * (transformScale / 4)), 0.0f, 0.0f, Space.Self);
-                // transform.localScale = new Vector3(transform.localScale.x - (transformScale * Time.deltaTime), transform.localScale.y - (transformScale * Time.deltaTime), transform.localScale.z - (transformScale * Time.deltaTime));
                 transform.localScale = ChooseScale(upOrDown);
                 break;
             case 3:
-
+                transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 4)));
+                transform.Rotate((angle * (transformScale * 4)), 0.0f, 0.0f, Space.Self);
+                transform.localScale = ChooseScale(upOrDown);
+                particleManager.Emit(transform.position, 8);
                 break;
             case 4:
 

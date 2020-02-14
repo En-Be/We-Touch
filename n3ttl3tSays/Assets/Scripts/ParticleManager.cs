@@ -39,6 +39,7 @@ public class ParticleManager : MonoBehaviour
         instance = Instantiate(particle, position, transform.rotation);
         instance.transform.localScale = new Vector3(size,size,size);
         instanceScript = instance.GetComponent<Particle>();
+        instanceScript.SetManager(this);
         instanceScript.BeatColour(beatColour[count]);
         instanceScript.SetParticleType(beat);
     }
