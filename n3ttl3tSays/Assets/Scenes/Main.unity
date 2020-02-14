@@ -763,7 +763,7 @@ MonoBehaviour:
   gestureTarget: {fileID: 1745641795}
   metronome: {fileID: 370053540}
   particles: {fileID: 1990575279}
-  missAllowance: 0.3
+  missAllowance: 1
   playerTurn: 0
   sequenceGestures: []
   sequenceBeat: 0

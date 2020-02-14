@@ -713,6 +713,23 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Rotation locked to portrait
 - Tried particles calling emitter method on manager but slows down framerate too much
 
+
+## Session 038
+
+**Fri Feb 14 15:18:59 - Fri Feb 14 16:23:13**
+
+**To do**
+- Stagger type 3 emitter to skip frames
+- type 3 don't shrink or grow
+- fix emit colours
+
+**Done**
+- Stagger type 3 emitter to skip frames
+- type 3 shrink
+- tried tweaking values to get nice visuals
+- extended emit method to discern between generations of particle
+
+
 ---
 
 ## Tasks

@@ -13,6 +13,7 @@ public class Particle : MonoBehaviour
     private int type;
     private float angle;
     private int upOrDown; // -1 or 1
+    private int frames = 0;
 
     void Start()
     {
@@ -53,7 +54,7 @@ public class Particle : MonoBehaviour
     {
         if(beat < 3)
         {
-            type = 3;
+            type = 1;
         }
         else if(beat < 6)
         {
@@ -61,7 +62,7 @@ public class Particle : MonoBehaviour
         }
         else if(beat < 9)
         {
-            type = 1;
+            type = 3;
         }
         else
         {
@@ -106,10 +107,14 @@ public class Particle : MonoBehaviour
                 transform.localScale = ChooseScale(upOrDown);
                 break;
             case 3:
-                transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 4)));
-                transform.Rotate((angle * (transformScale * 4)), 0.0f, 0.0f, Space.Self);
-                transform.localScale = ChooseScale(upOrDown);
-                particleManager.Emit(transform.position, 8);
+                transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 12)));
+                transform.localScale = ChooseScale(1);
+                frames++;
+                if(frames == 12)
+                {
+                    particleManager.Emit(transform.position, 1, 2);
+                    frames = 0;
+                }
                 break;
             case 4:
 

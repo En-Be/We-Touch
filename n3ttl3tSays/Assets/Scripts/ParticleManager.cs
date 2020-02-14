@@ -13,27 +13,32 @@ public class ParticleManager : MonoBehaviour
     private int currentBeat = 0;
     private float size = 3;
 
-    public void Emit(Vector3 position, int beat)
+    public void Emit(Vector3 position, int beat, int gen)
     {
-        if(beat > currentBeat)
+        if(gen == 1)
         {
-            count++;
-            currentBeat = beat;
-            size *= 2.5f;
+        
+            if(beat > currentBeat)
+            {
+                count++;
+                currentBeat = beat;
+                size *= 2.5f;
+            }
+
+            if(count > 2)
+            {
+                count = 0;
+                size = 3f;
+            }
+
+            if(beat == 0)
+            {
+                count = 0;
+                currentBeat = 0;
+                size = 3f;
+            }
         }
 
-        if(count > 2)
-        {
-            count = 0;
-            size = 3f;
-        }
-
-        if(beat == 0)
-        {
-            count = 0;
-            currentBeat = 0;
-            size = 3f;
-        }
 
         Debug.Log($"beat is {beat}, currentBeat is {currentBeat}, count is {count}");
         instance = Instantiate(particle, position, transform.rotation);

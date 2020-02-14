@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
     {
         if(playerTurn && gestureLibraryInput.isMoving)
         {
-            particles.Emit(position, sequenceBeat);
+            particles.Emit(position, sequenceBeat, 1);
         }
     }
 }
