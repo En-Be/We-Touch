@@ -759,11 +759,24 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Changed vector for particle translate
 - Started experimenting with particle type 4
 
+## Session 041
+
+**Fri Feb 28 15:59:38 - Fri Feb 28 17:37:53**
+
+**To do**
+- Design all four particle types as a set
+
+**Done**
+- Four types of particle implemented
+
 ---
 
 ## Tasks
 
 - Add an instructions scene
-- Continue with particle phase implementing
+- Continue with particle type implementing
+    - Next 4 with same behaviour but triangle sprite?
+    - 4 after that same behaviour but with cross sprite?
+    - 12 types after that same behaviours and sprites but different colours?
 - Make a tool for me to record my finger movements and add them to the gesture library
 - Redesign (colour, sizes, font)

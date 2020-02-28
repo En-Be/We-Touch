@@ -39,6 +39,7 @@ public class Particle : MonoBehaviour
     {
         var color = material.color;
         material.color = new Color(color.r + (5 * Time.deltaTime), color.g + (5 * Time.deltaTime), color.b + (5 * Time.deltaTime), color.a);
+        angle = transform.rotation.y;
         TypeBehaviour();
     }
 
@@ -52,7 +53,7 @@ public class Particle : MonoBehaviour
     {
         if(beat < 3)
         {
-            type = 3;
+            type = 1;
         }
         else if(beat < 6)
         {
@@ -60,11 +61,15 @@ public class Particle : MonoBehaviour
         }
         else if(beat < 9)
         {
-            type = 1;
+            type = 3;
+        }
+        else if(beat < 12)
+        {
+            type = 4;
         }
         else
         {
-            type = 4;
+            SetParticleType(beat - 12);
         }
     }
 
@@ -82,13 +87,11 @@ public class Particle : MonoBehaviour
                 break;
             case 3:
                 Debug.Log("type 3");
-                transform.Rotate( 0.0f, 0.0f, ChooseAngle(360), Space.Self);
+                transform.Rotate(0.0f, 0.0f, ChooseAngle(360), Space.Self);
                 upOrDown = ChooseUpOrDown();
                 break;
             case 4:
                 Debug.Log("type 4");
-                transform.Rotate( 0.0f, 0.0f, 180, Space.Self);
-
                 break;
         }
     }
@@ -101,28 +104,27 @@ public class Particle : MonoBehaviour
                 transform.localScale = ChooseScale(1);
                 break;
             case 2:
-                transform.Translate(new Vector3(1, 0, 0) * (Time.deltaTime * (transformScale / 8)));
-                transform.Rotate((angle * (transformScale / 4)), 0.0f, 0.0f, Space.Self);
+                transform.Translate(new Vector3(1, 0, 1) * (Time.deltaTime * (transformScale / 8)));
                 transform.localScale = ChooseScale(upOrDown);
                 break;
             case 3:
-                transform.Translate(new Vector3(1, 0, 0) * (Time.deltaTime * (transformScale / 16)));
+                transform.Translate(new Vector3(1, 0, 1) * (Time.deltaTime * (transformScale / 8)));
                 transform.localScale = ChooseScale(1);
                 frames++;
-                if(frames == 6)
+                if(frames == 5)
                 {
-                    particleManager.Emit(transform.position, 7, 0);
+                    particleManager.Emit(transform.position, 1, 0);
                     frames = 0;
                 }
                 break;
             case 4:
-                transform.Rotate((angle * (transformScale / 4)), 0.0f, 0.0f, Space.Self);
-                transform.Translate(new Vector3(1, 0, 0) * (Time.deltaTime * (transformScale / 2)));
+                transform.Rotate(0.0f, 0.0f, 15.0f, Space.Self);
+                transform.Translate(new Vector3(1, 0, 1) * (Time.deltaTime * (transformScale / 2)));
                 transform.localScale = ChooseScale(1);
                 frames++;
-                if(frames == 6)
+                if(frames == 5)
                 {
-                    particleManager.Emit(transform.position, 7, 0);
+                    particleManager.Emit(transform.position, 1, 0);
                     frames = 0;
                 }
                 break;
