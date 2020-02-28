@@ -39,8 +39,6 @@ public class Particle : MonoBehaviour
     {
         var color = material.color;
         material.color = new Color(color.r + (5 * Time.deltaTime), color.g + (5 * Time.deltaTime), color.b + (5 * Time.deltaTime), color.a);
-        // material.color = new Color(color.r, color.g, color.b, color.a - (fadePerSecond * Time.deltaTime));
-        // transform.localScale = new Vector3(transform.localScale.x - (transformScale * Time.deltaTime), transform.localScale.y - (transformScale * Time.deltaTime), transform.localScale.z - (transformScale * Time.deltaTime));
         TypeBehaviour();
     }
 
@@ -79,12 +77,12 @@ public class Particle : MonoBehaviour
                 break;
             case 2:
                 Debug.Log("type 2");
-                transform.Rotate(0.0f, ChooseAngle(360), 0.0f, Space.Self);
+                transform.Rotate(0.0f, 0.0f, ChooseAngle(360), Space.Self);
                 upOrDown = ChooseUpOrDown();
                 break;
             case 3:
                 Debug.Log("type 3");
-                transform.Rotate(0.0f, ChooseAngle(360), 0.0f, Space.Self);
+                transform.Rotate( 0.0f, 0.0f, ChooseAngle(360), Space.Self);
                 upOrDown = ChooseUpOrDown();
                 break;
             case 4:
@@ -99,7 +97,7 @@ public class Particle : MonoBehaviour
         {
             case 1:
                 transform.localScale = ChooseScale(1);
-                Debug.Log(Random.Range(-1, 1));
+                // Debug.Log(Random.Range(-1, 1));
                 break;
             case 2:
                 transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 8)));

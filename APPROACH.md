@@ -727,8 +727,24 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Stagger type 3 emitter to skip frames
 - type 3 shrink
 - tried tweaking values to get nice visuals
-- extended emit method to discern between generations of particle
+- extended emit method to discern between generations of particle, fixes emit colours
 
+## Session 039
+
+**Fri Feb 28 14:00:14 - Fri Feb 28 14:29:06**
+
+**To do**
+- type 4 particles
+    - Too many particles is lowering framerate, design needs to rely on something else.
+    - possiblities: draw lines between particles, transform particles, make particles lines that stretch, make layers of particles alias, use the particle system instead
+
+
+**Done**
+- change particle to sprite instead of mesh
+- display framerate
+- test performance
+- fixed particle rotation
+- particle size has strange behaviour
 
 ---
 
