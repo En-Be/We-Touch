@@ -52,7 +52,7 @@ public class Particle : MonoBehaviour
     {
         if(beat < 3)
         {
-            type = 1;
+            type = 3;
         }
         else if(beat < 6)
         {
@@ -60,7 +60,7 @@ public class Particle : MonoBehaviour
         }
         else if(beat < 9)
         {
-            type = 3;
+            type = 1;
         }
         else
         {
@@ -87,6 +87,8 @@ public class Particle : MonoBehaviour
                 break;
             case 4:
                 Debug.Log("type 4");
+                transform.Rotate( 0.0f, 0.0f, 180, Space.Self);
+
                 break;
         }
     }
@@ -97,25 +99,32 @@ public class Particle : MonoBehaviour
         {
             case 1:
                 transform.localScale = ChooseScale(1);
-                // Debug.Log(Random.Range(-1, 1));
                 break;
             case 2:
-                transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 8)));
+                transform.Translate(new Vector3(1, 0, 0) * (Time.deltaTime * (transformScale / 8)));
                 transform.Rotate((angle * (transformScale / 4)), 0.0f, 0.0f, Space.Self);
                 transform.localScale = ChooseScale(upOrDown);
                 break;
             case 3:
-                transform.Translate(Vector3.forward * (Time.deltaTime * (transformScale / 12)));
+                transform.Translate(new Vector3(1, 0, 0) * (Time.deltaTime * (transformScale / 16)));
                 transform.localScale = ChooseScale(1);
                 frames++;
-                if(frames == 12)
+                if(frames == 6)
                 {
-                    particleManager.Emit(transform.position, 1, 2);
+                    particleManager.Emit(transform.position, 7, 0);
                     frames = 0;
                 }
                 break;
             case 4:
-
+                transform.Rotate((angle * (transformScale / 4)), 0.0f, 0.0f, Space.Self);
+                transform.Translate(new Vector3(1, 0, 0) * (Time.deltaTime * (transformScale / 2)));
+                transform.localScale = ChooseScale(1);
+                frames++;
+                if(frames == 6)
+                {
+                    particleManager.Emit(transform.position, 7, 0);
+                    frames = 0;
+                }
                 break;
         }
     }

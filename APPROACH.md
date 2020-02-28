@@ -740,17 +740,29 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 
 **Done**
+- Make editor view closer to device scaling
 - change particle to sprite instead of mesh
 - display framerate
 - test performance
 - fixed particle rotation
 - particle size has strange behaviour
 
+## Session 040
+
+**Fri Feb 28 15:23:35 - Fri Feb 28 15:56:38**
+
+**To do**
+- Fix particle translate (axis?)
+- Fix particle scale speed
+
+**Done**
+- Changed vector for particle translate
+- Started experimenting with particle type 4
+
 ---
 
 ## Tasks
 
-- Make editor view closer to device scaling
 - Add an instructions scene
 - Continue with particle phase implementing
 - Make a tool for me to record my finger movements and add them to the gesture library
