@@ -30,14 +30,15 @@ public class SoundGenerator : MonoBehaviour
     //for beat adjustment
     private int count = 0;
     private int currentBeat = 0;
-    public float[] gainlevels;
-
+    public float[] volumelevels;
+    private AudioChorusFilter audioFilter;
 
     System.Random rand = new System.Random();
     AudioLowPassFilter lowPassFilter;
 
     void Awake()
     {
+        audioFilter = GetComponent<AudioChorusFilter>();
         sampling_frequency = AudioSettings.outputSampleRate;
 
         lowPassFilter = GetComponent<AudioLowPassFilter>();
@@ -65,7 +66,7 @@ public class SoundGenerator : MonoBehaviour
 
 
             //tone
-            tonalPart = (1f - noiseRatio) * (float)(gain * Mathf.Sin(phase));
+            tonalPart = (1f - noiseRatio) * (float)(gain * Mathf.Sqrt(phase));
 
 
             //together
@@ -83,8 +84,14 @@ public class SoundGenerator : MonoBehaviour
     void Update()
     {
         lowPassFilter.cutoffFrequency = cutOff ? cutoffOn : cutoffOff;
-        gain -= 0.04f;
-        gain = Mathf.Clamp(gain, 0, 1);
+        audioFilter.dryMix -= 0.05f;
+        audioFilter.dryMix = Mathf.Clamp(audioFilter.dryMix, 0, 1);
+        audioFilter.wetMix1 -= 0.05f;
+        audioFilter.wetMix1 = Mathf.Clamp(audioFilter.wetMix1, 0, 1);
+        audioFilter.wetMix2 -= 0.05f;
+        audioFilter.wetMix2 = Mathf.Clamp(audioFilter.wetMix2, 0, 1);
+        audioFilter.wetMix3 -= 0.05f;
+        audioFilter.wetMix3 = Mathf.Clamp(audioFilter.wetMix3, 0, 1);
     }
 
     public void Emit(Vector3 position, int beat)
@@ -109,7 +116,10 @@ public class SoundGenerator : MonoBehaviour
 
         }
 
-        gain = gainlevels[count];
+        audioFilter.dryMix = volumelevels[count];
+        audioFilter.wetMix1 = volumelevels[count];
+        audioFilter.wetMix2 = volumelevels[count];
+        audioFilter.wetMix3 = volumelevels[count];
     }
 
 }

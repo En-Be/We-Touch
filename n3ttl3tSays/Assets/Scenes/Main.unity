@@ -1029,11 +1029,11 @@ MonoBehaviour:
   cutoffOn: 800
   cutoffOff: 100
   cutOff: 0
-  frequency: 440
-  gain: 0
-  gainlevels:
-  - 0.1
-  - 0.5
+  frequency: 100
+  gain: 1
+  volumelevels:
+  - 0.2
+  - 0.6
   - 1
 --- !u!169 &1760392525
 AudioLowPassFilter:
@@ -1072,7 +1072,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1178,10 +1178,10 @@ AudioChorusFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760392523}
   m_Enabled: 1
-  m_DryMix: 1
-  m_WetMix1: 0.5
-  m_WetMix2: 0.5
-  m_WetMix3: 0.5
+  m_DryMix: 0
+  m_WetMix1: 0
+  m_WetMix2: 0
+  m_WetMix3: 0
   m_Delay: 10
   m_Rate: 12.65
   m_Depth: 0

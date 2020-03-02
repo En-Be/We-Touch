@@ -799,6 +799,21 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - tested on device
 - works but doesn't sound nice, might need to access audio source and change volume instead of gain
 
+## Session 043
+
+**Mon Mar  2 16:36:09 - Mon Mar  2 17:17:07**
+
+**To do**
+- Change gain level to volume levels
+
+**Done**
+- Find audio source component
+- Changing audio source volume didn't affect the generator, but the chorus effect wet/dry does
+- Changing level of chorus dry signal and three wet channels
+- test on device, different frequencies
+    - 100 is too low, can't hear it at all on phone
+    - 2000 is too shrill, unpleasant
+- Tried changing sin function to sqrt, not sure which sounds better
 ---
 
 ## Tasks
