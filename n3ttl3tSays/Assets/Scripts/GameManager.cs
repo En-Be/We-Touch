@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GestureTarget gestureTarget;
     public Metronome metronome;
     public ParticleManager particles;
+    public SoundGenerator sound;
 
     [Range(0,1)]
     public float missAllowance;

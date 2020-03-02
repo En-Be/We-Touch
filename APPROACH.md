@@ -769,6 +769,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 **Done**
 - Four types of particle implemented
 
+## Session 042
+
+**Mon Mar  2 14:40:30 - Mon Mar  2 15:19:59**
+
+**To do**
+- Loop particle type selection with higher scores
+- sound generator, vertical finger position affecting pitch and horizontal something else
+
+**Done**
+- Tested particle type looping
+- Found a sound generator sccript online
+- Made a sound Manager object and added the sound generator script to it
+- Played with values and effects to plan parameters affected by player
+- Added chorus filter component
+- Referenced the sound generator in the gameManager
+
 ---
 
 ## Tasks
