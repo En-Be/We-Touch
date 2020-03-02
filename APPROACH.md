@@ -785,6 +785,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Added chorus filter component
 - Referenced the sound generator in the gameManager
 
+## Session 043
+
+**Mon Mar  2 15:28:06 - Mon Mar  2 16:27:45**
+
+**To do**
+- Turn on sound when emitting
+
+**Done**
+- Added an Emit method to soundgenerator and called it together with particle emit method
+- set the gain to decrease over time, clamped to minimum zero
+- set gain to increase with beats and cycle like colours
+- tested on device
+- works but doesn't sound nice, might need to access audio source and change volume instead of gain
+
 ---
 
 ## Tasks

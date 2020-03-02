@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GestureTarget gestureTarget;
     public Metronome metronome;
     public ParticleManager particles;
-    public SoundGenerator sound;
+    public SoundGenerator sounds;
 
     [Range(0,1)]
     public float missAllowance;
@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
         if(playerTurn && gestureLibraryInput.isMoving)
         {
             particles.Emit(position, sequenceBeat, 1);
+            sounds.Emit(position, sequenceBeat);
         }
     }
 }

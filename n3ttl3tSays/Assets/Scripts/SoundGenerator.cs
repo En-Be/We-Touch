@@ -7,8 +7,6 @@ public class SoundGenerator : MonoBehaviour
 {
     private float sampling_frequency = 48000;
 
-
-
     [Range(0f, 1f)]
     public float noiseRatio = 0.5f;
 
@@ -21,8 +19,6 @@ public class SoundGenerator : MonoBehaviour
 
     public bool cutOff;
 
-
-    
     //for tonal part
 
     public float frequency = 440f;
@@ -31,6 +27,10 @@ public class SoundGenerator : MonoBehaviour
     private float increment;
     private float phase;
 
+    //for beat adjustment
+    private int count = 0;
+    private int currentBeat = 0;
+    public float[] gainlevels;
 
 
     System.Random rand = new System.Random();
@@ -76,23 +76,40 @@ public class SoundGenerator : MonoBehaviour
             {
                 data[i + 1] = data[i];
                 i++;
-            }
-
-            
-        }
-        
-
-        
-        
+            }   
+        }    
     }
 
     void Update()
     {
         lowPassFilter.cutoffFrequency = cutOff ? cutoffOn : cutoffOff;
+        gain -= 0.04f;
+        gain = Mathf.Clamp(gain, 0, 1);
     }
 
+    public void Emit(Vector3 position, int beat)
+    {
+        if(beat == 0)
+        {
+            count = 0;
+            currentBeat = 0;
+        }
 
+        if(beat > currentBeat)
+        {
+            {
+                count++;
+                currentBeat = beat;
+            }
 
-    
+            if(count > 2)
+            {
+                count = 0;
+            }
+
+        }
+
+        gain = gainlevels[count];
+    }
 
 }
