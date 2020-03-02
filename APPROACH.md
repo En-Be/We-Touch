@@ -801,7 +801,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 043
 
-**Mon Mar  2 16:36:09 - Mon Mar  2 17:17:07**
+**Mon Mar  2 16:36:09 - Mon Mar  2 17:32:09**
 
 **To do**
 - Change gain level to volume levels
@@ -814,6 +814,8 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - 100 is too low, can't hear it at all on phone
     - 2000 is too shrill, unpleasant
 - Tried changing sin function to sqrt, not sure which sounds better
+- Adjusted volume levels for device
+
 ---
 
 ## Tasks

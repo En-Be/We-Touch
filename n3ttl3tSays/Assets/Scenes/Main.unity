@@ -1029,11 +1029,11 @@ MonoBehaviour:
   cutoffOn: 800
   cutoffOff: 100
   cutOff: 0
-  frequency: 100
-  gain: 1
+  frequency: 400
+  gain: 0.1
   volumelevels:
   - 0.2
-  - 0.6
+  - 0.5
   - 1
 --- !u!169 &1760392525
 AudioLowPassFilter:

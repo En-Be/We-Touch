@@ -66,7 +66,7 @@ public class SoundGenerator : MonoBehaviour
 
 
             //tone
-            tonalPart = (1f - noiseRatio) * (float)(gain * Mathf.Sqrt(phase));
+            tonalPart = (1f - noiseRatio) * (float)(gain * Mathf.Sin(phase));
 
 
             //together
