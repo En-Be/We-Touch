@@ -769,6 +769,23 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 **Done**
 - Four types of particle implemented
 
+    - Type 1
+
+    - ![wip018](wip/wip018.gif)
+
+    - Type 2
+
+    - ![wip019](wip/wip019.gif)
+
+    - Type 3
+
+    - ![wip020](wip/wip020.gif)
+
+    - Type 4
+    (The scaling of type 4 looks better on an android device)
+
+    - ![wip021](wip/wip021.gif)
+    
 ## Session 042
 
 **Mon Mar  2 14:40:30 - Mon Mar  2 15:19:59**
