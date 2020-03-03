@@ -31,8 +31,8 @@ I want to be presented with growing sequences of gestures for me to copy
 
 ```
 As a player,
-so I can be visually entertained,
-I want my gestures to trigger drawing effects (colours, shapes).
+so I can have feedback when I'm doing well,
+I want my gestures to trigger drawing effects and sounds
 ```
 
 ```
@@ -47,11 +47,6 @@ so I can design gestures easily,
 I want a way to record my own and compare input to them
 ```
 
-```
-As the developer,
-so I can learn something about shaders and generating visual,
-I want to use Houdini for the effects
-```
 
 ## Spec
 
@@ -64,6 +59,26 @@ I want to use Houdini for the effects
 ## UX
 
 ![UX](wip/UX_001.png)
+
+## Particle types
+
+**Type 1**
+
+![wip018](wip/wip018.gif)
+
+**Type 2**
+
+![wip019](wip/wip019.gif)
+
+**Type 3**
+
+![wip020](wip/wip020.gif)
+
+**Type 4**
+(The scaling of type 4 looks better on an android device)
+
+![wip021](wip/wip021.gif)
+
 
 ## MVP
 
