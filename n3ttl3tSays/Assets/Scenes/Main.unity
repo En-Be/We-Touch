@@ -1030,7 +1030,11 @@ MonoBehaviour:
   cutoffOff: 100
   cutOff: 0
   frequency: 400
+  frequencyMin: 200
+  frequencyMax: 800
   gain: 0.1
+  audioFilterMin: 0
+  audioFilterMax: 1
   volumelevels:
   - 0.2
   - 0.5

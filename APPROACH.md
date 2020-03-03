@@ -823,14 +823,29 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 **To do**
 - Map pitch to vertical mouse position and the chorus filter to horizontal mouse position
     - get the screen height and width
-    - set the min and max for pitch and filter
-    - match the position as screen percentage to pitch and filter percentage
+
 
 **Done**
 - Made sound emitter call methods for volume, pitch and filter
 - Moved volume logic to new method
 - Found out I need to get the mouse position in pixels rather than use the given Vector3
 
+## Session 045
+
+**Tue Mar 3 15:06:44 - 
+
+**To do**
+- set the min and max for pitch and filter
+- match the position as screen percentage to pitch and filter percentage
+    - find the percentage of screen position:
+    - divide the position by (max minus min)
+    - multiply the result by 100
+    - find one percent of value to change:
+    - divide (max minus min) by 100
+    - (multiply result by percentage) plus min
+
+**Done**
+- 
 
 ---
 

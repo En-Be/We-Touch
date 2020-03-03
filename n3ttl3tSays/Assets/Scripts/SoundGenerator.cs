@@ -99,13 +99,14 @@ public class SoundGenerator : MonoBehaviour
         audioFilter.wetMix3 -= 0.05f;
         audioFilter.wetMix3 = Mathf.Clamp(audioFilter.wetMix3, 0, 1);
 
+        // ShowPositionAndPercentages();
     }
 
     public void Emit(Vector3 position, int beat)
     {
         SetVolume(beat);
-        SetPitch(Input.mousePosition);
-        SetFilter(Input.mousePosition);
+        SetPitch(CalculatePercentage(Input.mousePosition.y, 0, Screen.height));
+        SetFilter(CalculatePercentage(Input.mousePosition.x, 0, Screen.width));
     }
 
     private void SetVolume(int beat)
@@ -136,15 +137,35 @@ public class SoundGenerator : MonoBehaviour
         audioFilter.wetMix3 = volumelevels[count];
     }
 
-    private void SetPitch(Vector3 position)
+    private float CalculatePercentage(float position, float min, float max)
     {
-                    Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Debug.Log($"vertical = {position.y}");
+        float percent = (position / (max - min)) * 100;
+        return percent;
     }
 
-    private void SetFilter(Vector3 position)
+    private float CalculateOnePercent(float min, float max)
     {
-        Debug.Log($"horizontal = {position.x}");
+        float percent = (max - min) / 100;
+        return percent;
+    }
+
+    private void SetPitch(float percentage)
+    {
+        float pitch = (percentage * CalculateOnePercent(frequencyMin, frequencyMax)) + frequencyMin;
+        Debug.Log($"pitch frequency = {pitch}");
+    }
+
+    private void SetFilter(float percentage)
+    {
+        float filter = (percentage * CalculateOnePercent(audioFilterMin, audioFilterMax)) + audioFilterMin;
+        Debug.Log($"filter = {filter}");
+    }
+
+    private void ShowPositionAndPercentages()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Emit(Input.mousePosition, 0);
+        }
     }
 }
