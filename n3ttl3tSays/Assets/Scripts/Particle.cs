@@ -26,7 +26,7 @@ public class Particle : MonoBehaviour
     public void SetManager(ParticleManager pManager)
     {
         particleManager = pManager;
-        Debug.Log(particleManager);
+        // Debug.Log(particleManager);
     }
 
     private IEnumerator CountDown()
@@ -78,20 +78,20 @@ public class Particle : MonoBehaviour
         switch (type)
         {
             case 1:
-                Debug.Log("type 1");
+                // Debug.Log("type 1");
                 break;
             case 2:
-                Debug.Log("type 2");
+                // Debug.Log("type 2");
                 transform.Rotate(0.0f, 0.0f, ChooseAngle(360), Space.Self);
                 upOrDown = ChooseUpOrDown();
                 break;
             case 3:
-                Debug.Log("type 3");
+                // Debug.Log("type 3");
                 transform.Rotate(0.0f, 0.0f, ChooseAngle(360), Space.Self);
                 upOrDown = ChooseUpOrDown();
                 break;
             case 4:
-                Debug.Log("type 4");
+                // Debug.Log("type 4");
                 break;
         }
     }

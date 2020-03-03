@@ -40,7 +40,7 @@ public class ParticleManager : MonoBehaviour
         }
 
 
-        Debug.Log($"beat is {beat}, currentBeat is {currentBeat}, count is {count}");
+        // Debug.Log($"beat is {beat}, currentBeat is {currentBeat}, count is {count}");
         instance = Instantiate(particle, position, transform.rotation);
         instance.transform.localScale = new Vector3(size,size,size);
         instanceScript = instance.GetComponent<Particle>();

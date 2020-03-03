@@ -816,6 +816,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Tried changing sin function to sqrt, not sure which sounds better
 - Adjusted volume levels for device
 
+## Session 044
+
+**Tue Mar 3 14:27:55 - Tue Mar  3 14:59:01**
+
+**To do**
+- Map pitch to vertical mouse position and the chorus filter to horizontal mouse position
+    - get the screen height and width
+    - set the min and max for pitch and filter
+    - match the position as screen percentage to pitch and filter percentage
+
+**Done**
+- Made sound emitter call methods for volume, pitch and filter
+- Moved volume logic to new method
+- Found out I need to get the mouse position in pixels rather than use the given Vector3
+
+
 ---
 
 ## Tasks

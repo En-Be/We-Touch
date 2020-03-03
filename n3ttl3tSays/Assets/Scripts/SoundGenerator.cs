@@ -22,7 +22,13 @@ public class SoundGenerator : MonoBehaviour
     //for tonal part
 
     public float frequency = 440f;
+    public float frequencyMin;
+    public float frequencyMax;
     public float gain = 0.05f;
+
+    private AudioChorusFilter audioFilter;
+    public float audioFilterMin;
+    public float audioFilterMax;
 
     private float increment;
     private float phase;
@@ -31,7 +37,7 @@ public class SoundGenerator : MonoBehaviour
     private int count = 0;
     private int currentBeat = 0;
     public float[] volumelevels;
-    private AudioChorusFilter audioFilter;
+
 
     System.Random rand = new System.Random();
     AudioLowPassFilter lowPassFilter;
@@ -92,9 +98,17 @@ public class SoundGenerator : MonoBehaviour
         audioFilter.wetMix2 = Mathf.Clamp(audioFilter.wetMix2, 0, 1);
         audioFilter.wetMix3 -= 0.05f;
         audioFilter.wetMix3 = Mathf.Clamp(audioFilter.wetMix3, 0, 1);
+
     }
 
     public void Emit(Vector3 position, int beat)
+    {
+        SetVolume(beat);
+        SetPitch(Input.mousePosition);
+        SetFilter(Input.mousePosition);
+    }
+
+    private void SetVolume(int beat)
     {
         if(beat == 0)
         {
@@ -122,4 +136,15 @@ public class SoundGenerator : MonoBehaviour
         audioFilter.wetMix3 = volumelevels[count];
     }
 
+    private void SetPitch(Vector3 position)
+    {
+                    Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Debug.Log($"vertical = {position.y}");
+    }
+
+    private void SetFilter(Vector3 position)
+    {
+        Debug.Log($"horizontal = {position.x}");
+    }
 }

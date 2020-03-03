@@ -18,6 +18,8 @@ public class MouseInput : MonoBehaviour
         {
             Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPoint.y = 0;
+            Debug.Log($"Touching at X:{worldPoint.x} and Z:{worldPoint.z}");
+
             gestureControl.UpdateGesture(worldPoint);
         }
     }

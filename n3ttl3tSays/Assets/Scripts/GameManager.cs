@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void StartGameBeat()
     {
-        Debug.Log("Tick");
+        // Debug.Log("Tick");
         if(sequenceBeat == 0)
         {
             sequenceGestures.Add(gestureLibraryInput.ChooseAGesture());
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     private void StartPlayerBeat()
     {
-        Debug.Log("Tock");
+        // Debug.Log("Tock");
         gestureTarget.Reset();
         gestureLibraryInput.TriggerGesture(sequenceGestures[sequenceBeat]);
         ToggleInput();
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         sequenceBeat++;
         ToggleInput();
         turnFrames = gestureTarget.gestureFrames;
-        Debug.Log($"frames this turn: {turnFrames}");
+        // Debug.Log($"frames this turn: {turnFrames}");
         winThreshhold = turnFrames - Mathf.RoundToInt(turnFrames * missAllowance);
         AssessAttemptToCopy();
 
@@ -98,8 +98,8 @@ public class GameManager : MonoBehaviour
     private void AssessAttemptToCopy()
     {
         turnScore = gestureTarget.Score();
-        Debug.Log($"win threshhold this turn: {winThreshhold}");
-        Debug.Log($"score this turn: {turnScore}");
+        // Debug.Log($"win threshhold this turn: {winThreshhold}");
+        // Debug.Log($"score this turn: {turnScore}");
 
         if(turnScore < winThreshhold)
         {
