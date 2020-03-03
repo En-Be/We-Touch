@@ -777,7 +777,7 @@ MonoBehaviour:
   metronome: {fileID: 370053540}
   particles: {fileID: 1990575279}
   sounds: {fileID: 1760392524}
-  missAllowance: 1
+  missAllowance: 0.4
   playerTurn: 0
   sequenceGestures: []
   sequenceBeat: 0

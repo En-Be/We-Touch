@@ -832,7 +832,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 045
 
-**Tue Mar 3 15:06:44 - 
+**Tue Mar 3 15:06:44 - Tue Mar  3 15:57:06**
 
 **To do**
 - set the min and max for pitch and filter
@@ -845,7 +845,8 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - (multiply result by percentage) plus min
 
 **Done**
-- 
+- Finger vertical affects pitch
+- Finger horizontal affects filter depth
 
 ---
 

@@ -152,12 +152,14 @@ public class SoundGenerator : MonoBehaviour
     private void SetPitch(float percentage)
     {
         float pitch = (percentage * CalculateOnePercent(frequencyMin, frequencyMax)) + frequencyMin;
+        frequency = pitch;
         Debug.Log($"pitch frequency = {pitch}");
     }
 
     private void SetFilter(float percentage)
     {
         float filter = (percentage * CalculateOnePercent(audioFilterMin, audioFilterMax)) + audioFilterMin;
+        audioFilter.depth = filter;
         Debug.Log($"filter = {filter}");
     }
 
