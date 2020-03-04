@@ -867,7 +867,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 046
 
-**Wed Mar  4 15:37:36 - 
+**Wed Mar  4 15:37:36 - Wed Mar  4 16:51:15**
 
 **To do**
 - Make a tool for me to record my finger movements and add them to the gesture library
@@ -880,6 +880,18 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - recorder scene has a looping metronome
 - pointer appears and emits when receiving input
 - recorder scene exits to menu after 12 beats
+
+
+## Session 047
+
+**Wed Mar 4 17:02:09 - 
+
+**To do**
+- Record pointer movement into new clip each beat
+- Store clips in resources/gestures
+
+**Done**
+- A new animation clip is created each beat, with the time as it's name
 
 ---
 

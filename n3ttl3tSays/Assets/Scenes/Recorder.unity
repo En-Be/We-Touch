@@ -327,8 +327,10 @@ MonoBehaviour:
   touchInput: {fileID: 1805518470}
   particles: {fileID: 1990575279}
   sounds: {fileID: 1760392524}
+  pointer: {fileID: 370996837}
   anim: {fileID: 0}
   sequenceBeat: 0
+  clip: {fileID: 0}
 --- !u!1 &370996837
 GameObject:
   m_ObjectHideFlags: 0
