@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor.Animations;
+using UnityEditor;
 
 public class Recorder : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class Recorder : MonoBehaviour
         m_Recorder.BindComponent(transform);
 
         clip = new AnimationClip();
-        clip.name = $"clip_{sequenceBeat}_{System.DateTime.Now}";
+        clip.name = $"clip_{sequenceBeat}_{System.DateTime.Now.ToString("HH-mm-ss")}";
 
     }
 
@@ -63,6 +64,7 @@ public class Recorder : MonoBehaviour
         {
             // Save the recorded session to the clip.
             m_Recorder.SaveToClip(clip);
+            AssetDatabase.CreateAsset(clip, $"Assets/Resources/Gestures/{clip.name}.anim");
         }
         
         sequenceBeat++;
