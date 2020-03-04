@@ -884,7 +884,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 047
 
-**Wed Mar 4 17:02:09 - 
+**Wed Mar 4 17:02:09 - Wed Mar  4 18:25:25**
 
 **To do**
 - Record pointer movement into new clip each beat
@@ -894,7 +894,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - A new animation clip is created each beat, with the time as it's name
 - Clips are saved to the resources folder
 - Clips are saved with pointer location
-- Clips playback strangely
+- Clips playback strangely, and need to add events manually
+
+## Session 048
+
+**Wed Mar 4 19:35:36 - Wed Mar  4 22:03:48**
+
+**To do**
+- Add animation clip events automatically
+- Test scaling
+- Test on device
+
+**Done**
+- I think it is working but I haven't taken a break for ages and I've fried my brain
+
 
 ---
 

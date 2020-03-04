@@ -22,6 +22,11 @@ public class MouseInput : MonoBehaviour
 
             gestureControl.UpdateGesture(worldPoint);
         }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            gestureControl.DisablePointer();
+        }
     }
 
 }

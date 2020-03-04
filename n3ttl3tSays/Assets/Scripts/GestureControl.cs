@@ -40,6 +40,7 @@ public class GestureControl : MonoBehaviour
 
         if(recorder != null)
         {
+            recorder.AddTurnOnEvent();
             recorder.Emit(pos);
         }
     }
@@ -48,6 +49,11 @@ public class GestureControl : MonoBehaviour
     {
         pointerRenderer.enabled = false;
         pointerCollider.enabled = false;
+        
+        if(recorder != null)
+        {
+            recorder.AddTurnOffEvent();
+        }
     }
     public void FlipTurn()
     {

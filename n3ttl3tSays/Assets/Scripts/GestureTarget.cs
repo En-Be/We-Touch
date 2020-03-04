@@ -5,7 +5,7 @@ using UnityEngine;
 public class GestureTarget : MonoBehaviour
 {
     public GameManager gameManager;
-
+    private GestureLibraryInput gestureLibraryInput;
     private int score;
     public GameObject target;
     public int gestureFrames;
@@ -14,6 +14,8 @@ public class GestureTarget : MonoBehaviour
     public void Start()
     {
         previousPosition = target.transform.position;
+        gestureLibraryInput = gameObject.GetComponentInParent(typeof(GestureLibraryInput)) as GestureLibraryInput;
+
     }
 
     public void Reset()
@@ -42,5 +44,10 @@ public class GestureTarget : MonoBehaviour
     public int Score()
     {
         return score;
+    }
+
+    public void SwitchSendingGesture()
+    {
+        gestureLibraryInput.SwitchSendingGesturePos();
     }
 }

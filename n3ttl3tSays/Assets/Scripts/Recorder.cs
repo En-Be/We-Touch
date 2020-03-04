@@ -7,7 +7,6 @@ using UnityEditor;
 
 public class Recorder : MonoBehaviour
 {
-    public GestureControl gestureControl;
     public MouseInput mouseInput;
     public TouchInput touchInput;
     public ParticleManager particles;
@@ -19,7 +18,12 @@ public class Recorder : MonoBehaviour
     public int sequenceBeat;
     public AnimationClip clip;
     public GameObjectRecorder m_Recorder;
-    
+    private float timeOffset;
+
+    List<AnimationEvent> animEvents = new List<AnimationEvent>();
+    // AnimationEvent anEvent;
+    private bool isOn;
+
     void Start()
     {
         ToggleInput();
@@ -46,7 +50,13 @@ public class Recorder : MonoBehaviour
 
         clip = new AnimationClip();
         clip.name = $"clip_{sequenceBeat}_{System.DateTime.Now.ToString("HH-mm-ss")}";
+        animEvents = new List<AnimationEvent>();
+        timeOffset = Time.time;
+    }
 
+    void Update()
+    {
+        m_Recorder.TakeSnapshot(Time.deltaTime);
     }
 
     public void Emit(Vector3 position)
@@ -54,9 +64,33 @@ public class Recorder : MonoBehaviour
         particles.Emit(position, sequenceBeat, 1);
         sounds.Emit(position, sequenceBeat);
         
-        m_Recorder.TakeSnapshot(Time.deltaTime);
+        // m_Recorder.TakeSnapshot(Time.deltaTime);
+    }
 
-        Debug.Log(m_Recorder.root);
+    public void AddTurnOnEvent()
+    {
+        if(!isOn)
+        {
+            Debug.Log($"turning on at {Time.deltaTime}");
+            AnimationEvent anEvent = new AnimationEvent();
+            anEvent.functionName = "SwitchSendingGesture";
+            anEvent.time = Time.time - timeOffset;
+            animEvents.Add(anEvent);
+            isOn = true;
+        }
+    }
+
+    public void AddTurnOffEvent()
+    {
+        if(isOn)
+        {
+            Debug.Log($"turning off at {Time.deltaTime}");
+            AnimationEvent anEvent = new AnimationEvent();
+            anEvent.functionName = "SwitchSendingGesture";
+            anEvent.time = Time.time - timeOffset;
+            animEvents.Add(anEvent);
+            isOn = false;
+        }
     }
 
     public void FinishBeat()
@@ -64,6 +98,12 @@ public class Recorder : MonoBehaviour
         if (m_Recorder.isRecording)
         {
             // Save the recorded session to the clip.
+            AddTurnOffEvent();
+            foreach(AnimationEvent aniV in animEvents)
+            {
+                Debug.Log(aniV);
+            }
+            AnimationUtility.SetAnimationEvents(clip, animEvents.ToArray());
             m_Recorder.SaveToClip(clip);
             AssetDatabase.CreateAsset(clip, $"Assets/Resources/Gestures/{clip.name}.anim");
         }

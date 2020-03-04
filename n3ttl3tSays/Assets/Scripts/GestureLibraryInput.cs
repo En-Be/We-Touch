@@ -18,7 +18,7 @@ public class GestureLibraryInput : MonoBehaviour
     void Awake()
     {
         gestureControl = gameObject.GetComponent(typeof(GestureControl)) as GestureControl;
-        anim = gameObject.GetComponent(typeof(Animator)) as Animator;
+        anim = gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
         gestures = Resources.LoadAll("Gestures", typeof(AnimationClip));
         
         animatorOverrideController = new AnimatorOverrideController();
@@ -44,7 +44,7 @@ public class GestureLibraryInput : MonoBehaviour
 
     public void TriggerGesture(AnimationClip gesture)
     {
-        animatorOverrideController["SampleA"] = gesture;
+        animatorOverrideController["empty"] = gesture;
 		anim.runtimeAnimatorController = animatorOverrideController;
         anim.SetTrigger("Play");
     }
