@@ -38,6 +38,16 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(goesTo);
     }
 
+    public void LoadRecorder()
+    {
+        Debug.Log("pressed");
+        if(scoreManager != null)
+        {
+            Destroy(scoreManager.gameObject);
+        }
+        SceneManager.LoadScene("Recorder");
+    }
+
     public void LoadInstructions()
     {
 

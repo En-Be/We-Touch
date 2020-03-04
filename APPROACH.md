@@ -865,6 +865,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Finger vertical affects pitch
 - Finger horizontal affects filter depth
 
+## Session 046
+
+**Wed Mar  4 15:37:36 - 
+
+**To do**
+- Make a tool for me to record my finger movements and add them to the gesture library
+
+**Done**
+- Add a button to go to a recording screen on the menu
+- Duplicated the main scene and the game manager script
+- Renamed the duplicates as recorders
+- started removing unneeded behaviour
+- recorder scene has a looping metronome
+- pointer appears and emits when receiving input
+- recorder scene exits to menu after 12 beats
+
 ---
 
 ## Tasks
@@ -874,5 +890,5 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - Next 4 with same behaviour but triangle sprite?
     - 4 after that same behaviour but with cross sprite?
     - 12 types after that same behaviours and sprites but different colours?
-- Make a tool for me to record my finger movements and add them to the gesture library
+
 - Redesign (colour, sizes, font)
