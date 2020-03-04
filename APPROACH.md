@@ -894,6 +894,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - A new animation clip is created each beat, with the time as it's name
 - Clips are saved to the resources folder
 - Clips are saved with pointer location
+- Clips playback strangely
 
 ---
 
