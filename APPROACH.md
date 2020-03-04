@@ -898,7 +898,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 048
 
-**Wed Mar 4 19:35:36 - Wed Mar  4 22:03:48**
+**Wed Mar 4 19:35:36 - Wed Mar  4 22:12:28**
 
 **To do**
 - Add animation clip events automatically
@@ -907,6 +907,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 **Done**
 - I think it is working but I haven't taken a break for ages and I've fried my brain
+- Just tested it and found out that the static methods I used are editor only, and can't be compiled for use in an app. Bugger.
 
 
 ---
