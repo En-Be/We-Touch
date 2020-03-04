@@ -41,9 +41,8 @@ public class Recorder : MonoBehaviour
     {   
         // Create recorder and record the script GameObject.
         m_Recorder = new GameObjectRecorder(pointer);
-
         // Bind all the Transforms on the GameObject and all its children.
-        m_Recorder.BindComponent(transform);
+        m_Recorder.BindComponent(pointer.transform);
 
         clip = new AnimationClip();
         clip.name = $"clip_{sequenceBeat}_{System.DateTime.Now.ToString("HH-mm-ss")}";
@@ -56,6 +55,8 @@ public class Recorder : MonoBehaviour
         sounds.Emit(position, sequenceBeat);
         
         m_Recorder.TakeSnapshot(Time.deltaTime);
+
+        Debug.Log(m_Recorder.root);
     }
 
     public void FinishBeat()

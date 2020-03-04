@@ -40,7 +40,6 @@ public class GestureControl : MonoBehaviour
 
         if(recorder != null)
         {
-            Debug.Log(pos);
             recorder.Emit(pos);
         }
     }
