@@ -55,6 +55,16 @@ public class GestureLibraryInput : MonoBehaviour
         animTargetRenderer.enabled = !animTargetRenderer.enabled;
     }
 
+    public void TurnPointerOn()
+    {
+
+    }
+
+    public void TurnPointerOff()
+    {
+
+    }
+    
     public AnimationClip ChooseAGesture()
     {
         AnimationClip gesture = (AnimationClip)gestures[Random.Range(0, gestures.Length)];

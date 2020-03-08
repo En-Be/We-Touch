@@ -909,6 +909,23 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - I think it is working but I haven't taken a break for ages and I've fried my brain
 - Just tested it and found out that the static methods I used are editor only, and can't be compiled for use in an app. Bugger.
 
+## Session 049
+
+**Sun Mar  8 16:13:07 - 
+
+**To do**
+- See if I can easily record gestures with the mouse in the editor
+- Remove the runtime recorder if i can
+
+**Done**
+- Made some new animation clips
+    - This is best done in the animator window attached to the gesture target, so it can be recorded into
+    - Added events at 0 and 1 second
+    - Added events at start and end of motion
+    - This works but I've set the metronome to two seconds, not one
+    - Made a new set of gestures
+- Need the pointer to be off until triggered
+- Pointer is turned off, but the code is a mess and needs refactoring
 
 ---
 

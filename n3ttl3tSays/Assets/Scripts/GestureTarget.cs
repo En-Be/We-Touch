@@ -6,6 +6,7 @@ public class GestureTarget : MonoBehaviour
 {
     public GameManager gameManager;
     private GestureLibraryInput gestureLibraryInput;
+    private GestureControl gestureControl;
     private int score;
     public GameObject target;
     public int gestureFrames;
@@ -15,6 +16,7 @@ public class GestureTarget : MonoBehaviour
     {
         previousPosition = target.transform.position;
         gestureLibraryInput = gameObject.GetComponentInParent(typeof(GestureLibraryInput)) as GestureLibraryInput;
+        gestureControl = gameObject.GetComponentInParent(typeof(GestureControl)) as GestureControl;
 
     }
 
@@ -49,5 +51,17 @@ public class GestureTarget : MonoBehaviour
     public void SwitchSendingGesture()
     {
         gestureLibraryInput.SwitchSendingGesturePos();
+    }
+
+    public void TurnPointerOn()
+    {
+        
+    }
+
+    public void TurnPointerOff()
+    {
+        gestureControl.DisablePointer();
+        gestureLibraryInput.SwitchSendingGesturePos();
+
     }
 }
