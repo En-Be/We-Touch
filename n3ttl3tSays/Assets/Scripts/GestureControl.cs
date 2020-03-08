@@ -5,7 +5,6 @@ using UnityEngine;
 public class GestureControl : MonoBehaviour
 {
     public GameObject pointer;
-    public Recorder recorder;
 
     private Collider pointerCollider;
     private MeshRenderer pointerRenderer;
@@ -35,14 +34,10 @@ public class GestureControl : MonoBehaviour
         {
             pointerRenderer.enabled = true;
         }
+        Debug.Log("pointer should be active");
         pointerCollider.enabled = true;
         pointer.transform.position = pos;
 
-        if(recorder != null)
-        {
-            recorder.AddTurnOnEvent();
-            recorder.Emit(pos);
-        }
     }
 
     public void DisablePointer()
@@ -50,10 +45,6 @@ public class GestureControl : MonoBehaviour
         pointerRenderer.enabled = false;
         pointerCollider.enabled = false;
         
-        if(recorder != null)
-        {
-            recorder.AddTurnOffEvent();
-        }
     }
     public void FlipTurn()
     {

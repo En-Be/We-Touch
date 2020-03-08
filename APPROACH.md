@@ -926,7 +926,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - Made a new set of gestures
 - Need the pointer to be off until triggered
 - Pointer is turned off, but the code is a mess and needs refactoring
-
+- Removed Recorder script and references to it in scene
 ---
 
 ## Tasks
