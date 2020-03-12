@@ -777,7 +777,7 @@ MonoBehaviour:
   metronome: {fileID: 370053540}
   particles: {fileID: 1990575279}
   sounds: {fileID: 1760392524}
-  missAllowance: 0.3
+  missAllowance: 0.35
   playerTurn: 0
   sequenceGestures: []
   sequenceBeat: 0
@@ -1056,8 +1056,8 @@ MonoBehaviour:
   audioFilterMin: 0
   audioFilterMax: 1
   volumelevels:
-  - 0.2
-  - 0.5
+  - 0.3
+  - 0.6
   - 1
 --- !u!169 &1760392525
 AudioLowPassFilter:

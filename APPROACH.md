@@ -929,6 +929,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Removed Recorder script and references to it in scene
 ---
 
+## Session 050
+
+**Thu Mar 12 15:02:29 - Thu Mar 12 15:56:50**
+
+**To do**
+- Redesign (colour, sizes, font)
+
+
+**Done**
+- Slight difficulty adjustment based on feedback
+- Slight volume levels adjustment based on playing outside
+- Changed menu UI overlay method
+- Simplified both menu UIs, replacing buttons with circles and removing all text except score
+
 ## Tasks
 
 - Add an instructions scene
@@ -937,4 +951,3 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
     - 4 after that same behaviour but with cross sprite?
     - 12 types after that same behaviours and sprites but different colours?
 
-- Redesign (colour, sizes, font)

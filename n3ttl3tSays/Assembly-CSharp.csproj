@@ -65,7 +65,6 @@
      <Compile Include="Assets\Scripts\MouseInput.cs" />
      <Compile Include="Assets\Scripts\Particle.cs" />
      <Compile Include="Assets\Scripts\ParticleManager.cs" />
-     <Compile Include="Assets\Scripts\Recorder.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SoundGenerator.cs" />
      <Compile Include="Assets\Scripts\TouchInput.cs" />
