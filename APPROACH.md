@@ -949,7 +949,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 **To do**
 - Fade transitions between screens
-- Title card
+
 
 **Done**
 - Added a UI image over the whole screen, set to stretch
@@ -958,6 +958,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Added a coroutine to trigger the animation and load level after it plays
 - Turned off raycasting on the transition image so it doesn't interfere with menu buttons
 - Tested on device
+
+## Session 052
+
+**Fri Mar 13 13:29:36 - Fri Mar 13 14:18:25**
+
+**To do**
+- Title card
+- Change font
+- Make smooth circles for buttons
+
+**Done**
+- Downloaded a few fonts to try
+- Keeping my handwriting font for now
+- Made png images of circles to use in menus, different sizes to prevent aliasing
 
 ## Tasks
 
