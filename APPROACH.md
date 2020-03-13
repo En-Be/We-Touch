@@ -943,6 +943,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Changed menu UI overlay method
 - Simplified both menu UIs, replacing buttons with circles and removing all text except score
 
+## Session 051
+
+**Fri Mar 13 12:44:37 - Fri Mar 13 13:20:36**
+
+**To do**
+- Fade transitions between screens
+- Title card
+
+**Done**
+- Added a UI image over the whole screen, set to stretch
+- Gave the transition screen an animator
+- Added fade in and fade out animations to the animator, with in playing on load and out playing on trigger
+- Added a coroutine to trigger the animation and load level after it plays
+- Turned off raycasting on the transition image so it doesn't interfere with menu buttons
+- Tested on device
+
 ## Tasks
 
 - Add an instructions scene

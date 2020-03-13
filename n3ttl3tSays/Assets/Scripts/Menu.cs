@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     public string goesTo;
     public ScoreManager scoreManager;
     public Text scoreText;
+    public Animator anim;
 
     void Start()
     {
@@ -26,26 +27,25 @@ public class Menu : MonoBehaviour
         {
             scoreText.text = PlayerPrefs.GetInt("HighScore").ToString();
         }
+        anim = GetComponentInChildren<Animator>();
     }
 
     public void LoadLevel()
     {
         Debug.Log("pressed");
+        anim.SetTrigger("Out");
         if(scoreManager != null)
         {
             Destroy(scoreManager.gameObject);
         }
-        SceneManager.LoadScene(goesTo);
+        // SceneManager.LoadScene(goesTo);
+        StartCoroutine("TransitionOut");
     }
 
-    public void LoadRecorder()
+    private IEnumerator TransitionOut()
     {
-        Debug.Log("pressed");
-        if(scoreManager != null)
-        {
-            Destroy(scoreManager.gameObject);
-        }
-        SceneManager.LoadScene("Recorder");
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(goesTo);
     }
 
     public void LoadInstructions()
