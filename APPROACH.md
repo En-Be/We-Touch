@@ -987,7 +987,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 054
 
-**Fri Mar 13 16:54:58 - Fri Mar 13 20:01:58**
+**Fri Mar 13 16:54:58 - Fri Mar 13 20:11:58**
 
 **To do**
 - Particle title animation
