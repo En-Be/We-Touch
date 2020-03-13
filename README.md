@@ -1,4 +1,6 @@
-# n3ttl3t Says
+#
+
+![banner](wip/wip023.gif)
 
 ## A pattern memory game
 

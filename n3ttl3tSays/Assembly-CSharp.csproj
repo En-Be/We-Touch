@@ -67,6 +67,8 @@
      <Compile Include="Assets\Scripts\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SoundGenerator.cs" />
+     <Compile Include="Assets\Scripts\Titlecard.cs" />
+     <Compile Include="Assets\Scripts\TitleParticles.cs" />
      <Compile Include="Assets\Scripts\TouchInput.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Nicholas/Projects/n3ttl3tSays/n3ttl3tSays/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

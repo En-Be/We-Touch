@@ -983,8 +983,26 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Made a title card image in blender
 - made a titlecard scene with its own transition animation and script
 
+![titlecard](wip/titlecard_v2.png)
+
+## Session 054
+
+**Fri Mar 13 16:54:58 - Fri Mar 13 20:01:58**
+
+**To do**
+- Particle title animation
+
+**Done**
+- Particle burst emitter, choosing from three colours, random rotation and velocity
+- Titles appear
+- Scene transition fades
+
+![wip022](wip/wip022.gif)
+
 ## Tasks
 
+- Title animation
+- Title card sound
 - Add an instructions scene
 - Continue with particle type implementing
     - Next 4 with same behaviour but triangle sprite?
