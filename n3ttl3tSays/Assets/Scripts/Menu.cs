@@ -48,8 +48,16 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(goesTo);
     }
 
-    public void LoadInstructions()
+    public void LoadCredits()
     {
+        Debug.Log("pressed");
+        anim.SetTrigger("Out");
+        StartCoroutine("TransitionToCredits");
+    }
 
+    private IEnumerator TransitionToCredits()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Credits");
     }
 }

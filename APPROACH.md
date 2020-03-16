@@ -999,9 +999,22 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ![wip022](wip/wip022.gif)
 
+## Session 055
+
+**Mon Mar 16 15:37:26 - Mon Mar 16 16:19:13**
+
+**To do**
+- Change title
+- Adjust menu layout, make highscore a button to instructions/ credits page
+
+**Done**
+- Changed title
+- Made a Credits scene
+- made the highscore on the menu into a button that goes to the credits scene
+- credits scene has transitions and a button back to menu
+
 ## Tasks
 
-- Title animation
 - Title card sound
 - Add an instructions scene
 - Continue with particle type implementing
