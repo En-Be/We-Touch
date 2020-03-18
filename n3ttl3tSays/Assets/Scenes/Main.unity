@@ -1025,6 +1025,7 @@ GameObject:
   - component: {fileID: 1760392525}
   - component: {fileID: 1760392524}
   - component: {fileID: 1760392528}
+  - component: {fileID: 1760392529}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -1209,6 +1210,29 @@ AudioChorusFilter:
   m_Delay: 10
   m_Rate: 12.65
   m_Depth: 0
+--- !u!164 &1760392529
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760392523}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: 0
+  m_RoomHF: 0
+  m_DecayTime: 1.5
+  m_DecayHFRatio: 0.5
+  m_ReflectionsLevel: -10000
+  m_ReverbLevel: 0
+  m_ReverbDelay: 0.04
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 27
 --- !u!1 &1805518469
 GameObject:
   m_ObjectHideFlags: 0

@@ -1012,10 +1012,20 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Made a Credits scene
 - made the highscore on the menu into a button that goes to the credits scene
 - credits scene has transitions and a button back to menu
+- added reverb to audio source
+
+## Session 056
+
+**Wed Mar 18 15:38:40 - Wed Mar 18 17:02:07**
+
+**To do**
+- Title card sound
+
+**Done**
+- Title card sound
 
 ## Tasks
 
-- Title card sound
 - Add an instructions scene
 - Continue with particle type implementing
     - Next 4 with same behaviour but triangle sprite?
