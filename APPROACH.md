@@ -1024,9 +1024,21 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 **Done**
 - Title card sound
 
+
+## Session 057
+
+**Thu Mar 19 12:34:57 - 
+
+**To do**
+- Instruction scene
+    - Illustrated simple instruction
+    - Link to website
+
+**Done**
+- Instruction scene image
+
 ## Tasks
 
-- Add an instructions scene
 - Continue with particle type implementing
     - Next 4 with same behaviour but triangle sprite?
     - 4 after that same behaviour but with cross sprite?
