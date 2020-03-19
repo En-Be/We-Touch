@@ -1027,7 +1027,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 057
 
-**Thu Mar 19 12:34:57 - Thu Mar 19 13:53:50**
+**Thu Mar 19 12:34:57 - Thu Mar 19 14:23:15**
 
 **To do**
 - Instruction scene
@@ -1037,6 +1037,8 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 **Done**
 - Instruction scene image
 - Name on instructions is a hyperlink to my site
+- Tweaked UI layouts
+- Changed title
 
 ![wip024](wip/wip024.gif)
 
