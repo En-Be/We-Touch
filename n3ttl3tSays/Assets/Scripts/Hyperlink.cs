@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Hyperlink : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void GoTo()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Application.OpenURL("https://www.nicholasthe.space/");
     }
 }
