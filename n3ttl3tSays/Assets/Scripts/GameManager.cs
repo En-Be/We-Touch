@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
     {
         #if UNITY_EDITOR
             mouseInput.enabled = !mouseInput.enabled;
-        #elif UNITY_ANDROID
+        #elif UNITY_ANDROID || UNITY_IOS
             touchInput.enabled = !touchInput.enabled;
         #endif
     }

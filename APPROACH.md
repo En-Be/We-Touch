@@ -1048,15 +1048,16 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 **To do**
 - remove shader variant compiler
+- edit controls for ios
 
 **Done**
 - cleared the list of always built in shaders but that broke ui elements
 - adding ui/ default back to the shader list fixed it
 - saved the shader variants to an asset but that made the build longer and crash
+- added an IOS option to the conditional that decides which input option to activate
 
 ## Tasks
 
-- edit controls for ios
 - Continue with particle type implementing
     - Next 4 with same behaviour but triangle sprite?
     - 4 after that same behaviour but with cross sprite?
