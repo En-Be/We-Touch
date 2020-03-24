@@ -1044,7 +1044,7 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 058
 
-**Tue Mar 24 09:55:24 - 
+**Tue Mar 24 09:55:24 - Tue Mar 24 10:24:24**
 
 **To do**
 - remove shader variant compiler
@@ -1055,6 +1055,17 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - adding ui/ default back to the shader list fixed it
 - saved the shader variants to an asset but that made the build longer and crash
 - added an IOS option to the conditional that decides which input option to activate
+
+## Session 059
+
+**Tue Mar 24 10:28:24 - Tue Mar 24 11:27:59**
+
+**To do**
+- Test on ios
+
+**Done**
+- Works on ipad
+- Can't get xcode to recognise the iphone but since scaling and input worked properly on the ipad, I'll just assume it works 
 
 ## Tasks
 
