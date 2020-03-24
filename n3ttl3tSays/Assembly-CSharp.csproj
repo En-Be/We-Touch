@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\GestureControl.cs" />
      <Compile Include="Assets\Scripts\GestureLibraryInput.cs" />
      <Compile Include="Assets\Scripts\GestureTarget.cs" />
+     <Compile Include="Assets\Scripts\Hyperlink.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Metronome.cs" />
      <Compile Include="Assets\Scripts\MouseInput.cs" />

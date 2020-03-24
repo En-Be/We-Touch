@@ -1042,8 +1042,21 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ![wip024](wip/wip024.gif)
 
+## Session 058
+
+**Tue Mar 24 09:55:24 - 
+
+**To do**
+- remove shader variant compiler
+
+**Done**
+- cleared the list of always built in shaders but that broke ui elements
+- adding ui/ default back to the shader list fixed it
+- saved the shader variants to an asset but that made the build longer and crash
+
 ## Tasks
 
+- edit controls for ios
 - Continue with particle type implementing
     - Next 4 with same behaviour but triangle sprite?
     - 4 after that same behaviour but with cross sprite?
