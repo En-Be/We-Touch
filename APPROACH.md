@@ -1069,13 +1069,14 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 
 ## Session 060
 
-**Wed Mar 25 10:19:27 - 
+**Wed Mar 25 10:19:27 - Wed Mar 25 11:02:46**
 
 **To do**
 - see if it's easy to make devices vibrate
 
 **Done**
 - Set the device to vibrate but there are no parameters, so I don't think it helps at all. Disabled.
+- Added some more gestures to the library
 
 
 ## Tasks
