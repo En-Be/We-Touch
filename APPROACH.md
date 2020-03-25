@@ -1067,6 +1067,17 @@ adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
 - Works on ipad
 - Can't get xcode to recognise the iphone but since scaling and input worked properly on the ipad, I'll just assume it works 
 
+## Session 060
+
+**Wed Mar 25 10:19:27 - 
+
+**To do**
+- see if it's easy to make devices vibrate
+
+**Done**
+- Set the device to vibrate but there are no parameters, so I don't think it helps at all. Disabled.
+
+
 ## Tasks
 
 - Continue with particle type implementing

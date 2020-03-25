@@ -47,5 +47,6 @@ public class ParticleManager : MonoBehaviour
         instanceScript.SetManager(this);
         instanceScript.BeatColour(beatColour[count]);
         instanceScript.SetParticleType(beat);
+        // Handheld.Vibrate();
     }
 }

@@ -1,6 +1,6 @@
 #
 
-![banner](wip/wip023.gif)
+![banner](wip/wip024.gif)
 
 ## A pattern memory game
 
